@@ -1,0 +1,366 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7394462390780649929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 0c380481-a7b2-4c29-aa68-5085b8e8cfb7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Ol\xE1, seja bem vindo!"
+  children:
+  - f18c0102-0c66-46f7-957a-8cd6fcf1a69e
+  - fad050a8-4238-4a48-8f39-e21f3838d3c6
+  rect:
+    serializedVersion: 2
+    x: -8
+    y: 174
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-6895708504382497210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 7da36355-ac9c-44b0-888a-e4e60d85bb07
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Para acessar o invent\xE1rio e checar as suas cartas, usei a tecla I."
+  children:
+  - 5e94c803-dddc-4219-b3e9-8b5922a41e50
+  rect:
+    serializedVersion: 2
+    x: 1166
+    y: 80
+    width: 200
+    height: 100
+  onEnterAction: CompleteObjective1
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-5264824047949642861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 1ab7c37f-f7eb-4c2e-9a40-ecf451cc4f43
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "H\xE1 uma cobra nas redondezas causando problemas, porque voc\xEA n\xE3o
+    vai tentar resolver isso?    | Miss\xE3o \"Lone Wanderer\" adicionada ||"
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 911
+    y: 218
+    width: 200
+    height: 100
+  onEnterAction: LoneWanderer
+  onExitAction: UpdateUI
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-1796070137373248513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 5e94c803-dddc-4219-b3e9-8b5922a41e50
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Di\xE1logos est\xE3o presentes e marcados no seu mapa e com base no seu
+    avan\xE7o e escolhas novas intera\xE7\xF5es ser\xE3o desbloqueadas. Tente recome\xE7ar
+    esse di\xE1logo para o ver em a\xE7\xE3o!"
+  children:
+  - ffee5074-51c1-41cf-881a-c7b1a586da03
+  rect:
+    serializedVersion: 2
+    x: 1469
+    y: 82
+    width: 200
+    height: 100
+  onEnterAction: CompleteObjective2
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-72489782603978519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: f18c0102-0c66-46f7-957a-8cd6fcf1a69e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Comecemos com o tutorial!
+  children:
+  - ff07385c-d908-4733-a2f2-6a0c9fa597b0
+  - a67dcdd3-395a-4f71-bbce-f6b717fa34a0
+  - f8884c9d-827e-4526-be5a-d8b7aa342344
+  - d58cad4f-fda6-4d4c-b2a5-c3d3e7c7a3ba
+  rect:
+    serializedVersion: 2
+    x: 225
+    y: 75
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasntQuest
+    parameters:
+    - Tutorial
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8634f0ee61c5c45a9af80261ffe5f5, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -7394462390780649929}
+  - {fileID: 5904300992670160180}
+  - {fileID: 4551897858708986472}
+  - {fileID: 8441164066157947877}
+  - {fileID: 4582923485275187272}
+  - {fileID: 6326308311183942752}
+  - {fileID: -5264824047949642861}
+  - {fileID: -6895708504382497210}
+  - {fileID: -1796070137373248513}
+  - {fileID: 5656696116093871150}
+  - {fileID: -72489782603978519}
+  - {fileID: 147186443422905385}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &147186443422905385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: fad050a8-4238-4a48-8f39-e21f3838d3c6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Vejo que voc\xEA ja concluiu o tutorial, seguimos em frente!"
+  children:
+  - 1ab7c37f-f7eb-4c2e-9a40-ecf451cc4f43
+  rect:
+    serializedVersion: 2
+    x: 233
+    y: 431
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasQuest
+    parameters:
+    - Tutorial
+--- !u!114 &4551897858708986472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: a67dcdd3-395a-4f71-bbce-f6b717fa34a0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Sai da frente, eu quero jogar!
+  children:
+  - 1ab7c37f-f7eb-4c2e-9a40-ecf451cc4f43
+  rect:
+    serializedVersion: 2
+    x: 601
+    y: 114
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasntQuest
+    parameters:
+    - Tutorial
+--- !u!114 &4582923485275187272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: f8884c9d-827e-4526-be5a-d8b7aa342344
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Muito bem, agora vamos seguir em frente.
+  children:
+  - 1ab7c37f-f7eb-4c2e-9a40-ecf451cc4f43
+  rect:
+    serializedVersion: 2
+    x: 602
+    y: 310
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasQuest
+    parameters:
+    - Tutorial
+--- !u!114 &5656696116093871150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: ffee5074-51c1-41cf-881a-c7b1a586da03
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: " A partir de agora voc\xEA estar\xE1 sozinho, boa sorte.    | Finalizou
+    tutorial|"
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1826
+    y: 81
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: UpdateUI
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &5904300992670160180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: ff07385c-d908-4733-a2f2-6a0c9fa597b0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Eu... o que?
+  children:
+  - bb462aa7-25aa-4b7e-be30-221e297e3051
+  rect:
+    serializedVersion: 2
+    x: 600
+    y: 2
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasntQuest
+    parameters:
+    - Tutorial
+--- !u!114 &6326308311183942752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: bb462aa7-25aa-4b7e-be30-221e297e3051
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Os controles s\xE3o a base de cliques, voc\xEA consegue acessar o sistema
+    de quests na parte inferior direita. \xC9 l\xE1 onde aparecer\xE3o todos os seus
+    objetivos."
+  children:
+  - 7da36355-ac9c-44b0-888a-e4e60d85bb07
+  rect:
+    serializedVersion: 2
+    x: 894
+    y: 81
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: Tutorial
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &8441164066157947877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: d58cad4f-fda6-4d4c-b2a5-c3d3e7c7a3ba
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: "Ok, por onde eu come\xE7o?"
+  children:
+  - bb462aa7-25aa-4b7e-be30-221e297e3051
+  rect:
+    serializedVersion: 2
+    x: 598
+    y: 212
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasntQuest
+    parameters:
+    - Tutorial

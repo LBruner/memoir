@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Dialogue;
+using RPG.Saving;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -30,14 +30,21 @@ namespace RPG.Control
 
         private void Update()
         {
+            if (GetComponent<PlayerConversant>().IsTalking())
+            {
+                Debug.Log(GetComponent<PlayerConversant>().IsTalking());
+                return;
+            }
+
             if (InteractWithUI())
             {
                 return;
             }
 
-            if (GetComponent<PlayerConversant>().IsTalking()) { return; }
-
-            if (InteractWithComponent()) { return; }
+            if (InteractWithComponent())
+            {
+                return;
+            }
 
             if (InteractWithMovement()) { return; }
 
@@ -46,6 +53,20 @@ namespace RPG.Control
 
         private bool InteractWithUI()
         {
+            List<RaycastResult> hits = RaycastScreenElements();
+
+            if (hits.Count > 0)
+            {
+                foreach (var go in hits)
+                {
+                    if (go.gameObject.GetComponent<AIConversant>())
+                    {
+                        InteractWithComponent();
+                        return false;
+                    }
+                }
+            }
+
             if (EventSystem.current.IsPointerOverGameObject())
             {
                 SetCursor(CursorType.UI);
@@ -56,22 +77,35 @@ namespace RPG.Control
 
         private bool InteractWithComponent()
         {
-            RaycastHit[] hits = Physics.RaycastAll(GetMouseRay());
+            List<RaycastResult> hits = RaycastScreenElements();
 
-            foreach (RaycastHit hit in hits)
+            if (hits.Count > 0)
             {
-                IRaycastable[] raycastables = hit.transform.GetComponents<IRaycastable>();
-
-                foreach (IRaycastable raycastable in raycastables)
+                foreach (RaycastResult hit in hits)
                 {
-                    if (raycastable.HandleRaycast(this))
+                    IRaycastable[] raycastables = hit.gameObject.GetComponents<IRaycastable>();
+
+                    foreach (IRaycastable raycastable in raycastables)
                     {
-                        SetCursor(raycastable.GetCursorType());
-                        return true;
+                        if (raycastable.HandleRaycast(this))
+                        {
+                            SetCursor(raycastable.GetCursorType());
+                            return true;
+                        }
                     }
                 }
             }
             return false;
+        }
+
+        private static List<RaycastResult> RaycastScreenElements()
+        {
+            PointerEventData pointer = new PointerEventData(EventSystem.current);
+            pointer.position = Input.mousePosition;
+
+            List<RaycastResult> hits = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(pointer, hits);
+            return hits;
         }
 
         private bool InteractWithMovement()

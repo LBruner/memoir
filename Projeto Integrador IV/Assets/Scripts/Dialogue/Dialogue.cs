@@ -10,14 +10,13 @@ namespace Dialogue
     public class Dialogue : ScriptableObject, ISerializationCallbackReceiver
     {
         [SerializeField]
-        List<DialogueNode> nodes = new List<DialogueNode>();
-
-        [NonSerialized]
+        List<DialogueNode> nodes = new List<DialogueNode>(); //public
+        [SerializeField]
         Vector2 newNodeOffset = new Vector2(250, 0);
-        [NonSerialized]
-        Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
 
-        private void OnValidate()
+        public Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
+
+        public void OnValidate()
         {
             nodeLookup.Clear();
             foreach (DialogueNode node in GetAllNodes())
@@ -38,6 +37,7 @@ namespace Dialogue
 
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
         {
+            OnValidate();
             foreach (string childID in parentNode.GetChildren())
             {
                 if (nodeLookup.ContainsKey(childID))
@@ -52,7 +52,9 @@ namespace Dialogue
             foreach (DialogueNode node in GetAllChildren(currentNode))
             {
                 if (node.IsPlayerSpeaking())
+                {
                     yield return node;
+                }
             }
         }
 
@@ -61,7 +63,9 @@ namespace Dialogue
             foreach (DialogueNode node in GetAllChildren(currentNode))
             {
                 if (!node.IsPlayerSpeaking())
+                {
                     yield return node;
+                }
             }
         }
 
@@ -74,10 +78,13 @@ namespace Dialogue
             AddNode(newNode);
         }
 
-        private void AddNode(DialogueNode newNode)
+        public void DeleteNode(DialogueNode nodeToDelete)
         {
-            nodes.Add(newNode);
+            Undo.RecordObject(this, "Deleted Dialogue Node");
+            nodes.Remove(nodeToDelete);
             OnValidate();
+            CleanDanglingChildren(nodeToDelete);
+            Undo.DestroyObjectImmediate(nodeToDelete);
         }
 
         private DialogueNode MakeNode(DialogueNode parent)
@@ -87,20 +94,17 @@ namespace Dialogue
             if (parent != null)
             {
                 parent.AddChild(newNode.name);
-                newNode.SetPlayerIsSpeaking(!parent.IsPlayerSpeaking());
+                newNode.SetPlayerSpeaking(!parent.IsPlayerSpeaking());
                 newNode.SetPosition(parent.GetRect().position + newNodeOffset);
             }
 
             return newNode;
         }
 
-        public void DeleteNode(DialogueNode nodeToDelete)
+        private void AddNode(DialogueNode newNode)
         {
-            Undo.RecordObject(this, "Deleted Dialogue Node");
-            nodes.Remove(nodeToDelete);
+            nodes.Add(newNode);
             OnValidate();
-            CleanDanglingChildren(nodeToDelete);
-            Undo.DestroyObjectImmediate(nodeToDelete);
         }
 
         private void CleanDanglingChildren(DialogueNode nodeToDelete)

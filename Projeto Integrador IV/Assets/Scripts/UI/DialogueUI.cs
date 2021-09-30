@@ -25,11 +25,10 @@ namespace RPG.UI
 
         bool enableTypingEffect = false;
         int currentLetterIndex = 0;
-        string oldConversantName = "";
 
         private void Start()
         {
-            playerConversant = GameObject.FindWithTag("Player").GetComponent<PlayerConversant>();
+            playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
             playerConversant.onConversationUpdated += UpdateUI;
             nextButton.onClick.AddListener(() =>
             {
@@ -52,19 +51,20 @@ namespace RPG.UI
 
         private void UpdateUI()
         {
+            StopAllCoroutines();
+            AIText.text = "";
+
             gameObject.SetActive(playerConversant.IsActive());
             if (!playerConversant.IsActive())
             {
                 return;
             }
-
             conversantName.text = playerConversant.GetCurrentConversantName();
-            AIResponse.SetActive(!playerConversant.IsChosing());
-            choiceRoot.gameObject.SetActive(playerConversant.IsChosing());
+            AIResponse.SetActive(!playerConversant.IsChoosing());
+            choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
 
-            if (playerConversant.IsChosing())
+            if (playerConversant.IsChoosing())
             {
-                AIText.text = "";
                 BuildChoiceList();
             }
             else
@@ -81,13 +81,13 @@ namespace RPG.UI
             currentLetterIndex = 0;
             enableTypingEffect = false;
 
-            string fullText = playerConversant.GetText();
+            string fullText = conversant.GetText();
 
             for (int i = 0; i < fullText.Length; i++)
             {
                 currentLetterIndex++;
 
-                if (currentLetterIndex == fullText.Length / 3)
+                if (currentLetterIndex == fullText.Length / 4)
                     enableTypingEffect = true;
 
                 if (enableTypingEffect)
@@ -99,6 +99,8 @@ namespace RPG.UI
                 {
                     AIText.text = fullText.Substring(0, i);
                 }
+                // AIText.text = fullText.Substring(0, i);
+                // yield return new WaitForSeconds(typingSpeed);
             }
         }
 
