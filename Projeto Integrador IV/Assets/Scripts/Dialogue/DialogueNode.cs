@@ -11,8 +11,8 @@ namespace Dialogue
         bool isPlayerSpeaking = false;
         [SerializeField]
         string text;
-        [SerializeField]
-        List<string> children = new List<string>();
+
+        public List<string> children = new List<string>();
         [SerializeField]
         Rect rect = new Rect(0, 0, 200, 100);
         [SerializeField]
@@ -67,7 +67,7 @@ namespace Dialogue
             }
         }
 
-        public void SetPlayerIsSpeaking(bool newIsPlayerSpeaking)
+        public void SetPlayerSpeaking(bool newIsPlayerSpeaking)
         {
             Undo.RecordObject(this, "Changed Dialogue Node Speaker");
             isPlayerSpeaking = newIsPlayerSpeaking;

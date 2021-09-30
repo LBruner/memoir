@@ -29,7 +29,7 @@ namespace RPG.UI
 
         private void Start()
         {
-            playerConversant = GameObject.FindWithTag("Player").GetComponent<PlayerConversant>();
+            playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
             playerConversant.onConversationUpdated += UpdateUI;
             nextButton.onClick.AddListener(() =>
             {
@@ -59,10 +59,10 @@ namespace RPG.UI
             }
 
             conversantName.text = playerConversant.GetCurrentConversantName();
-            AIResponse.SetActive(!playerConversant.IsChosing());
-            choiceRoot.gameObject.SetActive(playerConversant.IsChosing());
+            AIResponse.SetActive(!playerConversant.IsChoosing());
+            choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
 
-            if (playerConversant.IsChosing())
+            if (playerConversant.IsChoosing())
             {
                 AIText.text = "";
                 BuildChoiceList();
@@ -87,7 +87,7 @@ namespace RPG.UI
             {
                 currentLetterIndex++;
 
-                if (currentLetterIndex == fullText.Length / 3)
+                if (currentLetterIndex == fullText.Length / 4)
                     enableTypingEffect = true;
 
                 if (enableTypingEffect)
