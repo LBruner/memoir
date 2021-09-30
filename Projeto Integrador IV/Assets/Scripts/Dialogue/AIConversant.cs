@@ -10,27 +10,9 @@ namespace Dialogue
         [SerializeField] string conversantName;
         [SerializeField] Dialogue dialogue = null;
 
-        bool isClose = false;
-
         public CursorType GetCursorType()
         {
-            Transform player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
-            if (Vector3.Distance(player.position, this.transform.position) < 5f)
-            {
-                isClose = true;
-            }
-            else
-            {
-                isClose = false;
-            }
-
-            if (isClose)
-                return CursorType.Dialogue;
-            else
-            {
-                return CursorType.FarConversant;
-            }
+            return CursorType.Dialogue;
         }
 
         public bool HandleRaycast(PlayerController callingController)
@@ -40,9 +22,11 @@ namespace Dialogue
                 return false;
             }
 
-            if (Input.GetMouseButton(0) && isClose)
+            if (Input.GetMouseButton(0))
             {
-                callingController.GetComponent<PlayerConversant>().StartDialogue(this, dialogue);
+                PlayerConversant conversant = FindObjectOfType<PlayerConversant>();
+                if (callingController != null)
+                    conversant.StartDialogue(this, dialogue);
             }
             return true;
         }

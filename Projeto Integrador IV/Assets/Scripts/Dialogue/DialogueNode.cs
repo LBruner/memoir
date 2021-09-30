@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using RPG.Core;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,14 +13,16 @@ namespace Dialogue
         bool isPlayerSpeaking = false;
         [SerializeField]
         string text;
-        [SerializeField]
-        List<string> children = new List<string>();
+
+        public List<string> children = new List<string>();
         [SerializeField]
         Rect rect = new Rect(0, 0, 200, 100);
         [SerializeField]
         string onEnterAction;
         [SerializeField]
         string onExitAction;
+        [SerializeField]
+        Condition condition;
 
         public Rect GetRect()
         {
@@ -49,6 +53,11 @@ namespace Dialogue
             return onExitAction;
         }
 
+        public bool CheckCondition(IEnumerable<IPredicateEvaluator> evaluators)
+        {
+            return condition.Check(evaluators);
+        }
+
 #if UNITY_EDITOR
         public void SetPosition(Vector2 newPosition)
         {
@@ -67,7 +76,7 @@ namespace Dialogue
             }
         }
 
-        public void SetPlayerIsSpeaking(bool newIsPlayerSpeaking)
+        public void SetPlayerSpeaking(bool newIsPlayerSpeaking)
         {
             Undo.RecordObject(this, "Changed Dialogue Node Speaker");
             isPlayerSpeaking = newIsPlayerSpeaking;
