@@ -9,10 +9,10 @@ namespace Dialogue
     public class PlayerConversant : MonoBehaviour
     {
         [SerializeField] string playerName;
-        public Dialogue currentDialogue;
+        Dialogue currentDialogue;
 
-        public DialogueNode currentNode = null;
-        AIConversant currentConversant = null;
+        DialogueNode currentNode = null;    //public
+        AIConversant currentConversant = null; //public
 
         bool isChoosing = false;
         bool isTalking = false;

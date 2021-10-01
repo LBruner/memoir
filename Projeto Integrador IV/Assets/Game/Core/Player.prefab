@@ -192,7 +192,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98b9d977e8fbc6a428be3d35a8997e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statuses:
-  - quest: {fileID: 11400000, guid: aedc6cb78980cf54ba8570609844017d, type: 2}
-    completedObjectives:
-    - scare a dragon

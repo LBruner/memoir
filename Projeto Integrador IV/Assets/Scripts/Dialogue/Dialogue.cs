@@ -10,7 +10,7 @@ namespace Dialogue
     public class Dialogue : ScriptableObject, ISerializationCallbackReceiver
     {
         [SerializeField]
-        public List<DialogueNode> nodes = new List<DialogueNode>();
+        List<DialogueNode> nodes = new List<DialogueNode>(); //public
         [SerializeField]
         Vector2 newNodeOffset = new Vector2(250, 0);
 
@@ -42,7 +42,6 @@ namespace Dialogue
             {
                 if (nodeLookup.ContainsKey(childID))
                 {
-                    Debug.Log("E");
                     yield return nodeLookup[childID];
                 }
             }
