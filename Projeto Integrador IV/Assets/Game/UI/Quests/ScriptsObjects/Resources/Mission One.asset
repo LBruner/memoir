@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Mission One
   m_EditorClassIdentifier: 
   objectives:
-  - Catch a frog
-  - Scare a dragon
+  - reference: 1
+    description: Go scare a dragon
+  - reference: 2
+    description: Catch a golden frog
