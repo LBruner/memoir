@@ -25,7 +25,6 @@ namespace RPG.UI
 
         bool enableTypingEffect = false;
         int currentLetterIndex = 0;
-        string oldConversantName = "";
 
         private void Start()
         {
@@ -64,7 +63,6 @@ namespace RPG.UI
 
             if (playerConversant.IsChoosing())
             {
-                AIText.text = "";
                 BuildChoiceList();
             }
             else
@@ -81,7 +79,7 @@ namespace RPG.UI
             currentLetterIndex = 0;
             enableTypingEffect = false;
 
-            string fullText = playerConversant.GetText();
+            string fullText = conversant.GetText();
 
             for (int i = 0; i < fullText.Length; i++)
             {

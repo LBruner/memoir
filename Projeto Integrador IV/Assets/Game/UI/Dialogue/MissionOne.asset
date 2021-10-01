@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7260388771027301265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 85bed1d7-0b0c-4915-9a73-d2eb3f5c4bea
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: CompleteQuest
+  children:
+  - 3b90212f-5234-4b8c-b88c-ed6dfcdcff9a
+  rect:
+    serializedVersion: 2
+    x: 763
+    y: 137
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: CompleteQuest
+--- !u!114 &-2958398345130548356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 1abd6ed5-c581-48fe-9069-59db5ab3438c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: OlaOlaOlaOla
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1022
+    y: 39
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
 --- !u!114 &-2387849989315168831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,15 +60,17 @@ MonoBehaviour:
   m_Name: d4083a33-3f21-4c44-977d-5984610a6e40
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: GiveQuest
-  children: []
+  text: "Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1"
+  children:
+  - cb3f542c-3e0d-4db6-869c-d103766afd28
+  - 85bed1d7-0b0c-4915-9a73-d2eb3f5c4bea
   rect:
     serializedVersion: 2
     x: 522
     y: 39
     width: 200
     height: 100
-  onEnterAction: GiveQuest
+  onEnterAction: 
   onExitAction: 
 --- !u!114 &11400000
 MonoBehaviour:
@@ -39,7 +88,34 @@ MonoBehaviour:
   - {fileID: 2777134860209907359}
   - {fileID: 2593694632705701963}
   - {fileID: -2387849989315168831}
+  - {fileID: 6915655906051031564}
+  - {fileID: -7260388771027301265}
+  - {fileID: 681759397422166607}
+  - {fileID: -2958398345130548356}
   newNodeOffset: {x: 250, y: 0}
+--- !u!114 &681759397422166607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 3b90212f-5234-4b8c-b88c-ed6dfcdcff9a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: OlaOlaOlaOlaOla
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1013
+    y: 137
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
 --- !u!114 &2593694632705701963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,8 +134,8 @@ MonoBehaviour:
   - d4083a33-3f21-4c44-977d-5984610a6e40
   rect:
     serializedVersion: 2
-    x: 271
-    y: 39
+    x: 250
+    y: 56
     width: 200
     height: 100
   onEnterAction: 
@@ -88,3 +164,27 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+--- !u!114 &6915655906051031564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: cb3f542c-3e0d-4db6-869c-d103766afd28
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: GiveQuest
+  children:
+  - 1abd6ed5-c581-48fe-9069-59db5ab3438c
+  rect:
+    serializedVersion: 2
+    x: 772
+    y: 39
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: GiveQuest

@@ -19,21 +19,34 @@ namespace RPG.Quests
             onUpdate?.Invoke();
         }
 
+        public void CompleteObjective(Quest quest, string objective)
+        {
+            QuestStatus status = GetQuestStatus(quest);
+            status.CompleteObjective(objective);
+
+            onUpdate?.Invoke();
+        }
+
         private bool HasQuest(Quest quest)
         {
-            foreach (QuestStatus status in statuses)
-            {
-                if (status.GetQuest() == quest)
-                {
-                    return true;
-                }
-            }
-            return false;
+            return GetQuestStatus(quest) != null;
         }
 
         public IEnumerable<QuestStatus> GetStatuses()
         {
             return statuses;
+        }
+
+        private QuestStatus GetQuestStatus(Quest quest)
+        {
+            foreach (QuestStatus status in statuses)
+            {
+                if (status.GetQuest() == quest)
+                {
+                    return status;
+                }
+            }
+            return null;
         }
     }
 }

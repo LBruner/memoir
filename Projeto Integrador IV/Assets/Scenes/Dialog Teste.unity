@@ -303,6 +303,8 @@ GameObject:
   - component: {fileID: 519302494}
   - component: {fileID: 519302497}
   - component: {fileID: 519302498}
+  - component: {fileID: 519302499}
+  - component: {fileID: 519302500}
   m_Layer: 0
   m_Name: NPC (1)
   m_TagString: Untagged
@@ -454,6 +456,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: aedc6cb78980cf54ba8570609844017d, type: 2}
+--- !u!114 &519302499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519302490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Action: CompleteQuest
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 519302500}
+        m_MethodName: CompleteObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &519302500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519302490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6880513b5cffc4f4b852ee1f50cba6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: aedc6cb78980cf54ba8570609844017d, type: 2}
+  objective: Scare a dragon
 --- !u!1001 &961379443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -463,11 +506,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 192594165, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 192594165, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 192594165, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_SizeDelta.x
@@ -479,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 192594165, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4164.6943
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1618136693512946, guid: 07dc30b6f1bbb4147acd5fd5555a18f5, type: 3}
       propertyPath: m_Name
@@ -694,6 +737,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772305314170683750, guid: 07dc30b6f1bbb4147acd5fd5555a18f5,
+        type: 3}
+      propertyPath: typingSpeed
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 3256409010690979891, guid: 07dc30b6f1bbb4147acd5fd5555a18f5,
         type: 3}
@@ -1066,7 +1114,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1761338126
+--- !u!1 &1639632008
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1074,14 +1122,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1761338134}
-  - component: {fileID: 1761338133}
-  - component: {fileID: 1761338132}
-  - component: {fileID: 1761338131}
-  - component: {fileID: 1761338130}
-  - component: {fileID: 1761338129}
-  - component: {fileID: 1761338128}
-  - component: {fileID: 1761338127}
+  - component: {fileID: 1639632018}
+  - component: {fileID: 1639632017}
+  - component: {fileID: 1639632016}
+  - component: {fileID: 1639632015}
+  - component: {fileID: 1639632014}
+  - component: {fileID: 1639632013}
+  - component: {fileID: 1639632012}
+  - component: {fileID: 1639632011}
+  - component: {fileID: 1639632010}
+  - component: {fileID: 1639632009}
   m_Layer: 0
   m_Name: NPC (2)
   m_TagString: Untagged
@@ -1089,26 +1139,67 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1761338127
+--- !u!114 &1639632009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761338126}
+  m_GameObject: {fileID: 1639632008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6880513b5cffc4f4b852ee1f50cba6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: aedc6cb78980cf54ba8570609844017d, type: 2}
+  objective: Scare a dragon
+--- !u!114 &1639632010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639632008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Action: CompleteQuest
+  onTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1639632009}
+        m_MethodName: CompleteObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1639632011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639632008}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b26de899c145244790ffd7e2afeb706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: aedc6cb78980cf54ba8570609844017d, type: 2}
---- !u!114 &1761338128
+--- !u!114 &1639632012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761338126}
+  m_GameObject: {fileID: 1639632008}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
@@ -1118,7 +1209,7 @@ MonoBehaviour:
   onTrigger:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1761338127}
+      - m_Target: {fileID: 1639632011}
         m_MethodName: GiveQuest
         m_Mode: 1
         m_Arguments:
@@ -1129,13 +1220,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1761338129
+--- !u!114 &1639632013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761338126}
+  m_GameObject: {fileID: 1639632008}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bae581aa72b16147952d0550d41ad72, type: 3}
@@ -1143,13 +1234,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversantName: NPC
   dialogue: {fileID: 11400000, guid: 790240bd046622445bb17dece2e4c391, type: 2}
---- !u!54 &1761338130
+--- !u!54 &1639632014
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761338126}
+  m_GameObject: {fileID: 1639632008}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1159,26 +1250,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1761338131
+--- !u!65 &1639632015
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761338126}
+  m_GameObject: {fileID: 1639632008}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1761338132
+--- !u!23 &1639632016
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761338126}
+  m_GameObject: {fileID: 1639632008}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1211,23 +1302,23 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1761338133
+--- !u!33 &1639632017
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761338126}
+  m_GameObject: {fileID: 1639632008}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1761338134
+--- !u!4 &1639632018
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761338126}
+  m_GameObject: {fileID: 1639632008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.692, y: 0, z: 4.8716536}
+  m_LocalPosition: {x: -13.14, y: 0, z: 4.8716536}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

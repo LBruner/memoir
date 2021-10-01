@@ -58,7 +58,6 @@ namespace Dialogue
             }
         }
 
-
         public IEnumerable<DialogueNode> GetAIChildren(DialogueNode currentNode)
         {
             foreach (DialogueNode node in GetAllChildren(currentNode))
