@@ -24,6 +24,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: CompleteQuest
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-2958398345130548356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +50,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-2387849989315168831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,6 +70,7 @@ MonoBehaviour:
   children:
   - cb3f542c-3e0d-4db6-869c-d103766afd28
   - 85bed1d7-0b0c-4915-9a73-d2eb3f5c4bea
+  - 7036e8ca-b584-4a83-8512-54c682450786
   rect:
     serializedVersion: 2
     x: 522
@@ -72,6 +79,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +102,9 @@ MonoBehaviour:
   - {fileID: -7260388771027301265}
   - {fileID: 681759397422166607}
   - {fileID: -2958398345130548356}
+  - {fileID: 1239024905086422199}
+  - {fileID: 1377358485215205627}
+  - {fileID: 7269694972233747011}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &681759397422166607
 MonoBehaviour:
@@ -116,6 +129,64 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &1239024905086422199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 7036e8ca-b584-4a83-8512-54c682450786
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Ja fiz isso!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 756
+    y: 235
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasQuest
+    parameters:
+    - 
+--- !u!114 &1377358485215205627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: ff2dc83b-39d8-4ba3-81f7-d98959b938fa
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Pular tutorial
+  children:
+  - f3466d11-ab0b-47d7-96da-63f216b3d863
+  rect:
+    serializedVersion: 2
+    x: 247
+    y: 152
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasQuest
+    parameters:
+    - MissionTwo
 --- !u!114 &2593694632705701963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +200,7 @@ MonoBehaviour:
   m_Name: aee49291-33a5-4018-add3-247537e8d01b
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1"
+  text: Eu... o que?
   children:
   - d4083a33-3f21-4c44-977d-5984610a6e40
   rect:
@@ -140,6 +211,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &2777134860209907359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,9 +227,10 @@ MonoBehaviour:
   m_Name: bbb58b97-546c-45f5-a90c-97b176a9e326
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1Ol\xE1"
+  text: Bem vindo ao tutorial!
   children:
   - aee49291-33a5-4018-add3-247537e8d01b
+  - ff2dc83b-39d8-4ba3-81f7-d98959b938fa
   rect:
     serializedVersion: 2
     x: 21
@@ -164,6 +239,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &6915655906051031564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,3 +266,32 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: GiveQuest
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &7269694972233747011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: f3466d11-ab0b-47d7-96da-63f216b3d863
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: NOOOOOO
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 497
+    y: 152
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []

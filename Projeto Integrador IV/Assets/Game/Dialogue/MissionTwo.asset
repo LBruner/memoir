@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8902535503482489186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 4ede7295-b4e5-444b-84bd-db608a9e398c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Finish MissionTwo
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 258
+    y: 92
+    width: 200
+    height: 100
+  onEnterAction: CompleteQuest
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-1781516019552228381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 97447b6c-7c8c-4629-afeb-700f15207753
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Receive MissionTwo
+  children:
+  - 274f4a81-ddc4-483d-83d5-4dd2ef08cf36
+  rect:
+    serializedVersion: 2
+    x: 250
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8634f0ee61c5c45a9af80261ffe5f5, type: 3}
+  m_Name: MissionTwo
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 695401312287279963}
+  - {fileID: -1781516019552228381}
+  - {fileID: 4076288627873945920}
+  - {fileID: -8902535503482489186}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &695401312287279963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 41a370e7-d04a-4f37-8b33-7736ecb453f2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Ol\xE1"
+  children:
+  - 97447b6c-7c8c-4629-afeb-700f15207753
+  - 4ede7295-b4e5-444b-84bd-db608a9e398c
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &4076288627873945920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 274f4a81-ddc4-483d-83d5-4dd2ef08cf36
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Added new mission!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 500
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: GiveQuest
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
