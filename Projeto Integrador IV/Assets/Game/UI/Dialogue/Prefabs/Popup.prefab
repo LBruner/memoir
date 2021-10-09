@@ -66,8 +66,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d84d690f7f38e3646908103eb8dbe3af, type: 2}
+  m_sharedMaterial: {fileID: 2509183721946175146, guid: d84d690f7f38e3646908103eb8dbe3af,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -358,8 +359,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: fasfasfafasfasfas
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af80073a653ea6640be3a7b81cdbfd56, type: 2}
+  m_sharedMaterial: {fileID: 1774737621412476362, guid: af80073a653ea6640be3a7b81cdbfd56,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -522,7 +524,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 1.14
 --- !u!114 &1078326021947358578
 MonoBehaviour:
   m_ObjectHideFlags: 0

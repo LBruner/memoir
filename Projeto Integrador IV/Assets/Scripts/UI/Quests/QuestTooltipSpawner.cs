@@ -8,6 +8,9 @@ namespace RPG.UI.Quests
 {
     public class QuestTooltipSpawner : TooltipSpawner
     {
+        [SerializeField] bool isMenu = false;
+        [SerializeField] Quest quest;
+
         public override bool CanCreateTooltip()
         {
             return true;
@@ -15,8 +18,14 @@ namespace RPG.UI.Quests
 
         public override void UpdateTooltip(GameObject tooltip)
         {
-            QuestStatus status = GetComponent<QuestItemUI>().GetQuestStatus();
-            tooltip.GetComponent<QuestTooltipUI>().Setup(status);
+            if (isMenu)
+                tooltip.GetComponent<QuestTooltipUI>().SetupMenu(quest);
+            else
+            {
+                QuestStatus status = GetComponent<QuestItemUI>().GetQuestStatus();
+                tooltip.GetComponent<QuestTooltipUI>().Setup(status);
+            }
+
         }
     }
 }

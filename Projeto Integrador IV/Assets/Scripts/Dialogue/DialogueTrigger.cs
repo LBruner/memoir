@@ -8,13 +8,16 @@ namespace Dialogue
     public class DialogueTrigger : MonoBehaviour
     {
         [SerializeField] string Action;
-        [SerializeField] UnityEvent onTrigger;
+        [SerializeField] UnityEvent[] actions;
 
         public void Trigger(string ActionToTrigger)
         {
             if (ActionToTrigger == Action)
             {
-                onTrigger?.Invoke();
+                foreach (var trigger in actions)
+                {
+                    trigger?.Invoke();
+                }
             }
         }
     }

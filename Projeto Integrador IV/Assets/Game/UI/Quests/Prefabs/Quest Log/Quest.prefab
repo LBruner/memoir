@@ -67,15 +67,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: Example quest
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d1e1c6b013fb4ea45b24bd94e6323573, type: 2}
+  m_sharedMaterial: {fileID: -5064238198496244037, guid: d1e1c6b013fb4ea45b24bd94e6323573,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4282244581
+  m_fontColor: {r: 0.8962264, g: 0.8659598, b: 0.24096651, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -234,6 +235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltipPrefab: {fileID: 2050042212510784345, guid: b2aafc688606ad542b452440c05f3d0b,
     type: 3}
+  isMenu: 0
+  quest: {fileID: 0}
 --- !u!114 &5743322080637607490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,15 +337,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 2/5
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d84d690f7f38e3646908103eb8dbe3af, type: 2}
+  m_sharedMaterial: {fileID: 2509183721946175146, guid: d84d690f7f38e3646908103eb8dbe3af,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4287286998
+  m_fontColor: {r: 0.8396226, g: 0.8066186, b: 0.5425863, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

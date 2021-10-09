@@ -8,6 +8,17 @@ namespace RPG.Quests
     {
         [SerializeField] Quest quest;
 
+        // [SerializeField] Quest[] testQuest;
+
+        private void Start()
+        {
+            // foreach (Quest quest in testQuest)
+            // {
+            //     QuestList questList = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestList>();
+            //     questList.AddQuest(quest);
+            // }
+        }
+
         public void GiveQuest()
         {
             QuestList questList = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestList>();

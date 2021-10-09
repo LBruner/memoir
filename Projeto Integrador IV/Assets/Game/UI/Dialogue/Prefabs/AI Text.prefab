@@ -69,8 +69,9 @@ MonoBehaviour:
     here!You don't look like someone from here!You don't look like someone from here!You
     don't look like someone from here!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: af80073a653ea6640be3a7b81cdbfd56, type: 2}
+  m_sharedMaterial: {fileID: 1774737621412476362, guid: af80073a653ea6640be3a7b81cdbfd56,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

@@ -71,13 +71,11 @@ namespace RPG.Control
 
         public object CaptureState()
         {
-            Debug.Log("!");
             return new SerializableVector3(transform.position);
         }
 
         public void RestoreState(object state)
         {
-            Debug.Log("FSOAJFS");
             SerializableVector3 position = (SerializableVector3)state;
             GetComponent<NavMeshAgent>().enabled = false;
             transform.position = position.ToVector();

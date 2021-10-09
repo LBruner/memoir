@@ -67,22 +67,23 @@ namespace RPG.Quests
             List<object> stateList = state as List<object>;
             if (stateList == null)
             {
-                Debug.Log("FOSAJ");
                 return;
             }
             statuses.Clear();
             foreach (object objectState in stateList)
             {
-                Debug.Log("1");
                 statuses.Add(new QuestStatus(objectState));
             }
         }
 
         public bool? Evaluate(string predicate, string[] parameters)
         {
-            if (predicate != "HasQuest") return null;
-
-            return HasQuest(Quest.GetByName(parameters[0]));
+            switch (predicate)
+            {
+                case "HasQuest":
+                    return HasQuest(Quest.GetByName(parameters[0]));
+            }
+            return null;
         }
     }
 }

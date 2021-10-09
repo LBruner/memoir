@@ -15,7 +15,11 @@ namespace RPG.UI.Quests
         {
             Quest quest = status.GetQuest();
             title.text = quest.GetTitle();
-            objectiveContainer.DetachChildren();
+
+            foreach (Transform item in objectiveContainer)
+            {
+                Destroy(item.gameObject);
+            }
 
             foreach (var objective in quest.GetObjectives())
             {
@@ -25,6 +29,25 @@ namespace RPG.UI.Quests
                     prefab = objectivePrefab;
                 }
 
+                GameObject objectiveInstance = Instantiate(prefab, objectiveContainer);
+                TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
+                objectiveText.text = objective.description;
+            }
+        }
+
+        public void SetupMenu(Quest quest)
+        {
+            title.text = quest.GetTitle();
+
+            foreach (Transform item in objectiveContainer)
+            {
+                Destroy(item.gameObject);
+            }
+
+            foreach (var objective in quest.GetObjectives())
+            {
+                GameObject prefab = objectiveIncompletePrefab;
+                
                 GameObject objectiveInstance = Instantiate(prefab, objectiveContainer);
                 TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
                 objectiveText.text = objective.description;

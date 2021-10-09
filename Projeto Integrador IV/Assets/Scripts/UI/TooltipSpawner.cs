@@ -14,7 +14,7 @@ namespace RPG.UI
     {
         // CONFIG DATA
         [Tooltip("The prefab of the tooltip to spawn.")]
-        [SerializeField] GameObject tooltipPrefab = null;
+        [SerializeField] public GameObject tooltipPrefab = null;
 
         // PRIVATE STATE
         GameObject tooltip = null;

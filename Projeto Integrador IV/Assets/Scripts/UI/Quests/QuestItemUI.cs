@@ -13,6 +13,9 @@ namespace RPG.UI.Quests
         public void Setup(QuestStatus status)
         {
             this.status = status;
+
+            if (title == null && progress == null) return;
+
             title.text = status.GetQuest().GetTitle();
             progress.text = status.GetCompletedCount() + "/" + status.GetQuest().GetObjectiveCount();
         }
