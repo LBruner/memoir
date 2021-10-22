@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace RPG.Quests
 {
@@ -12,13 +10,13 @@ namespace RPG.Quests
         {
             QuestList questList = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestList>();
 
-            FindObjectOfType<GameManager>().AddQuest(quest.name);
+            GameManager.Instance.AddQuest(quest.name);
             questList.AddQuest(quest);
         }
 
         public void UpdateUI()
         {
-            FindObjectOfType<GameManager>().UpdateMenuQuest();
+            GameManager.Instance.UpdateMenuQuest();
         }
     }
 }

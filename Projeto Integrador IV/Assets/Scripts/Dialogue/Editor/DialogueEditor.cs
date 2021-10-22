@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
 
-namespace Dialogue.Editor
+namespace RPG.Dialogue.Editor
 {
     public class DialogueEditor : EditorWindow
     {
@@ -156,7 +156,6 @@ namespace Dialogue.Editor
             {
                 draggingCanvas = false;
             }
-
         }
 
         private void DrawNode(DialogueNode node)

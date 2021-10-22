@@ -20,6 +20,11 @@ namespace RPG.SceneManagement
             canvasGroup.alpha = 1;
         }
 
+        public void FadeInImmediate()
+        {
+            canvasGroup.alpha = 0;
+        }
+
         public Coroutine FadeOut(float time)
         {
             return Fade(1, time);

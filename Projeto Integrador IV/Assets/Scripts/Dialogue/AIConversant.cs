@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using RPG.Control;
 using UnityEngine;
 
-namespace Dialogue
+namespace RPG.Dialogue
 {
     public class AIConversant : MonoBehaviour, IRaycastable
     {
         [SerializeField] string conversantName;
+        [SerializeField] Color conversantColor;
         [SerializeField] Dialogue dialogue = null;
+
+        public AIConversant(string name, Color color)
+        {
+            conversantName = name;
+            conversantColor = color;
+        }
 
         public CursorType GetCursorType()
         {
@@ -34,6 +41,11 @@ namespace Dialogue
         public string GetName()
         {
             return conversantName;
+        }
+
+        public Color GetColor()
+        {
+            return conversantColor;
         }
     }
 }

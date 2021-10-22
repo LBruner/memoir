@@ -59,22 +59,30 @@ namespace RPG.UI.Quests
 
         public void SetupMenu(Quest quest)
         {
-            title.text = quest.GetTitle();
+            if (title != null)
+                title.text = quest.GetTitle();
 
-            foreach (Transform item in objectiveContainer)
+            if (objectiveContainer != null)
             {
-                Destroy(item.gameObject);
-            }
+                foreach (Transform item in objectiveContainer)
+                {
+                    Destroy(item.gameObject);
+                }
 
-            foreach (var objective in quest.GetObjectives())
+                foreach (var objective in quest.GetObjectives())
+                {
+                    GameObject prefab = objectiveIncompletePrefab;
+
+                    GameObject objectiveInstance = Instantiate(prefab, objectiveContainer);
+                    TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
+                    objectiveText.text = objective.description;
+                }
+            }
+            if (rewardText != null)
             {
-                GameObject prefab = objectiveIncompletePrefab;
-
-                GameObject objectiveInstance = Instantiate(prefab, objectiveContainer);
-                TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
-                objectiveText.text = objective.description;
+                Debug.Log(GetRewardText(quest));
+                rewardText.text = GetRewardText(quest);
             }
-            rewardText.text = GetRewardText(quest);
         }
     }
 }

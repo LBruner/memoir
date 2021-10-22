@@ -1,23 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace Dialogue
+namespace RPG.Dialogue
 {
     public class DialogueTrigger : MonoBehaviour
     {
         [SerializeField] string Action;
-        [SerializeField] UnityEvent[] actions;
+        [SerializeField] UnityEvent action;
 
         public void Trigger(string ActionToTrigger)
         {
             if (ActionToTrigger == Action)
             {
-                foreach (var trigger in actions)
-                {
-                    trigger?.Invoke();
-                }
+                action?.Invoke();
             }
         }
     }

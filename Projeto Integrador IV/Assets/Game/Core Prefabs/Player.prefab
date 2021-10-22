@@ -52,6 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Player
+  playerColor: {r: 0, g: 0, b: 0, a: 0}
+  startingQuests: []
+  startingDialogue: {fileID: 0}
 --- !u!33 &257133855384546198
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -133,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea9374b509b70f4bba37e4a2ca8cf00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueIdentifier: 1
+  uniqueIdentifier: player
 --- !u!114 &257133855384546196
 MonoBehaviour:
   m_ObjectHideFlags: 0

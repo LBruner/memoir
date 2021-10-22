@@ -17,7 +17,7 @@ namespace RPG.SceneManagement
             StartCoroutine(LoadLastScene());
         }
 
-        IEnumerator LoadLastScene()
+        public IEnumerator LoadLastScene()
         {
             yield return GetComponent<SavingSystem>().LoadLastScene(defaulSaveFile);
 

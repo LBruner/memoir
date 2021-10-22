@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-781710781958602622
+--- !u!114 &-8481400960770611996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,15 +10,99 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
-  m_Name: 7d3c1d03-e54e-4252-8152-0b53b7c5baa8
+  m_Name: 738e240a-efd9-4635-b9fe-a63a24e2a1d2
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: 
+  text: 'I can''t say more than that...discover the secrets behind this curse....      '
+  children:
+  - 451e79bb-f872-4a9f-af34-99022a6983c4
+  rect:
+    serializedVersion: 2
+    x: 738
+    y: 131
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-6282009959351589294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: fe6b99b9-6486-441f-a6ad-de2fe43f7def
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'What are you? Or who are you?      '
+  children:
+  - be378554-6bca-47cc-bacf-053ec49305d4
+  rect:
+    serializedVersion: 2
+    x: 237
+    y: 18
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-1110670910423983765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 451e79bb-f872-4a9f-af34-99022a6983c4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Well, at least i can put you in the right way. To the south you'll find someone
+    you have to talk to.
   children: []
   rect:
     serializedVersion: 2
-    x: 310
-    y: 117
+    x: 979
+    y: 135
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-845512522681352797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: e22bd92c-08e4-4ffa-8b1f-3d8be4be20e5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Hey Henrique, you need to wake up!        '
+  children:
+  - fe6b99b9-6486-441f-a6ad-de2fe43f7def
+  - 127c26ed-b896-441a-a018-ebd39feb8ec2
+  - bbd44015-15ea-4c40-b1bc-fc27f89bd10b
+  rect:
+    serializedVersion: 2
+    x: 6
+    y: 63
     width: 200
     height: 100
   onEnterAction: 
@@ -39,9 +123,16 @@ MonoBehaviour:
   m_Name: Intro
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 0}
+  - {fileID: -845512522681352797}
+  - {fileID: -6282009959351589294}
+  - {fileID: 696797535873791515}
+  - {fileID: 1796882086170528569}
+  - {fileID: 289682561312948154}
+  - {fileID: 7214769449138113}
+  - {fileID: -8481400960770611996}
+  - {fileID: -1110670910423983765}
   newNodeOffset: {x: 250, y: 0}
---- !u!114 &1113376381793565596
+--- !u!114 &7214769449138113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,16 +142,98 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
-  m_Name: a188bc85-37fc-4e20-be20-7b80b314fd6f
+  m_Name: fef44f7a-90eb-4c12-aed2-01ff57087312
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: 'Aah.... Hmm.... Bom.... dia.... '
+  text: Im so sorry but there's nothing you can do for them now...
   children:
-  - 7d3c1d03-e54e-4252-8152-0b53b7c5baa8
+  - 738e240a-efd9-4635-b9fe-a63a24e2a1d2
   rect:
     serializedVersion: 2
-    x: 3
+    x: 524
+    y: 204
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &289682561312948154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: bbd44015-15ea-4c40-b1bc-fc27f89bd10b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: What happened to my family?
+  children:
+  - fef44f7a-90eb-4c12-aed2-01ff57087312
+  rect:
+    serializedVersion: 2
+    x: 281
+    y: 209
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &696797535873791515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 127c26ed-b896-441a-a018-ebd39feb8ec2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'What''s going on here? '
+  children:
+  - be378554-6bca-47cc-bacf-053ec49305d4
+  rect:
+    serializedVersion: 2
+    x: 272
     y: 118
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &1796882086170528569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: be378554-6bca-47cc-bacf-053ec49305d4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'I am the guardian of the oracle that you carry on your wrist. You are the
+    pure boy of the prophecy, who needs to stop HER.        '
+  children:
+  - 738e240a-efd9-4635-b9fe-a63a24e2a1d2
+  rect:
+    serializedVersion: 2
+    x: 485
+    y: 52
     width: 200
     height: 100
   onEnterAction: 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Dialogue;
+using RPG.Dialogue;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -60,8 +60,16 @@ namespace RPG.UI
                 return;
             }
             conversantName.text = playerConversant.GetCurrentConversantName();
+            conversantName.color = playerConversant.GetCurrentConversantColor();
             AIResponse.SetActive(!playerConversant.IsChoosing());
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
+
+
+            int choicesCount = 0;
+            foreach (DialogueNode choice in playerConversant.GetChoices())
+            {
+                choicesCount++;
+            }
 
             if (playerConversant.IsChoosing())
             {
@@ -82,7 +90,11 @@ namespace RPG.UI
             enableTypingEffect = false;
 
             string fullText = conversant.GetText();
-
+            if (fullText == "")
+            {
+                Debug.Log("l");
+                playerConversant.Next();
+            }
             for (int i = 0; i < fullText.Length; i++)
             {
                 currentLetterIndex++;
@@ -99,8 +111,6 @@ namespace RPG.UI
                 {
                     AIText.text = fullText.Substring(0, i);
                 }
-                // AIText.text = fullText.Substring(0, i);
-                // yield return new WaitForSeconds(typingSpeed);
             }
         }
 
@@ -134,7 +144,7 @@ namespace RPG.UI
             Vector3 spawnPos = new Vector2(transform.position.x, transform.position.y + GetComponent<RectTransform>().rect.height / 2);
             GameObject popup = Instantiate(popupDialogue, popupParent.transform);
 
-            popup.GetComponent<DialoguePopup>().SetUpPopup(textToDisplay, playerConversant.GetCurrentConversantName());
+            popup.GetComponent<DialoguePopup>().SetUpPopup(textToDisplay, playerConversant.GetCurrentConversantName(), playerConversant.GetCurrentConversantColor());
         }
     }
 }

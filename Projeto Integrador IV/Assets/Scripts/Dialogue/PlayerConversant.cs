@@ -4,12 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using RPG.Core;
+using RPG.Quests;
+using RPG.Saving;
+using RPG.UI;
 
-namespace Dialogue
+namespace RPG.Dialogue
 {
-    public class PlayerConversant : MonoBehaviour
+    public class PlayerConversant : MonoBehaviour, ISaveable
     {
         [SerializeField] string playerName;
+        [SerializeField] Color playerColor;
+        [SerializeField] Quest[] startingQuests;
+        [SerializeField] Dialogue startingDialogue;
         Dialogue currentDialogue;
 
         DialogueNode currentNode = null;    //public
@@ -17,9 +23,27 @@ namespace Dialogue
 
         bool isChoosing = false;
         bool isTalking = false;
+        bool finishedStartingDialogue = false;
 
         public event Action onConversationUpdated;
 
+        private void Awake()
+        {
+            // foreach (var quest in startingQuests)
+            // {
+            //     FindObjectOfType<QuestGiver>().GiveDefaultQuest(quest);
+            // }
+            // FindObjectOfType<QuestCompletion>().CompleteDefaultObjective(test);
+        }
+
+        private void Start()
+        {
+            if (!finishedStartingDialogue)
+            {
+                FindObjectOfType<PlayerConversant>().StartDialogue(new AIConversant("AlmA", Color.white), startingDialogue);
+                finishedStartingDialogue = true;
+            }
+        }
         private void OnDisable()
         {
             CancelInvoke();
@@ -28,7 +52,6 @@ namespace Dialogue
         {
             CancelInvoke();
         }
-
 
         public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {
@@ -63,6 +86,11 @@ namespace Dialogue
             return isChoosing;
         }
 
+        public void SetIsChoosing(bool state)
+        {
+            isChoosing = state;
+        }
+
         public bool IsTalking()
         {
             return isTalking;
@@ -85,6 +113,19 @@ namespace Dialogue
             else
             {
                 return currentConversant.GetName();
+            }
+        }
+
+        public Color GetCurrentConversantColor()
+        {
+
+            if (isChoosing)
+            {
+                return playerColor;
+            }
+            else
+            {
+                return currentConversant.GetColor();
             }
         }
 
@@ -170,6 +211,17 @@ namespace Dialogue
             {
                 trigger.Trigger(action);
             }
+        }
+
+        public object CaptureState()
+        {
+            return finishedStartingDialogue;
+        }
+
+        public void RestoreState(object state)
+        {
+            Debug.Log((bool)state);
+            this.finishedStartingDialogue = (bool)state;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace RPG.Quests
             QuestList questList = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestList>();
             questList.CompleteObjective(quest, objective);
 
-            FindObjectOfType<GameManager>().CompleteQuest(quest.name);
+            GameManager.Instance.CompleteQuest(quest.name);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Dialogue;
-using RPG.Saving;
+using RPG.Dialogue;
+using RPG.Map;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.EventSystems;
@@ -32,7 +32,6 @@ namespace RPG.Control
         {
             if (GetComponent<PlayerConversant>().IsTalking())
             {
-                Debug.Log(GetComponent<PlayerConversant>().IsTalking());
                 return;
             }
 
@@ -46,7 +45,7 @@ namespace RPG.Control
                 return;
             }
 
-            if (InteractWithMovement()) { return; }
+            // if (InteractWithMovement()) { return; }
 
             SetCursor(CursorType.None);
         }
@@ -59,7 +58,7 @@ namespace RPG.Control
             {
                 foreach (var go in hits)
                 {
-                    if (go.gameObject.GetComponent<AIConversant>())
+                    if (go.gameObject.GetComponent<AIConversant>() || go.gameObject.GetComponent<MapQuest>())
                     {
                         InteractWithComponent();
                         return false;
@@ -108,55 +107,55 @@ namespace RPG.Control
             return hits;
         }
 
-        private bool InteractWithMovement()
-        {
-            Vector3 target;
-            bool hasHit = RaycastNavMesh(out target);
+        // private bool InteractWithMovement()
+        // {
+        //     Vector3 target;
+        //     bool hasHit = RaycastNavMesh(out target);
 
-            if (hasHit)
-            {
-                if (!GetComponent<Mover>().CanMoveTo(target)) { return false; }
+        //     if (hasHit)
+        //     {
+        //         if (!GetComponent<Mover>().CanMoveTo(target)) { return false; }
 
-                if (Input.GetMouseButton(0))
-                    mover.StartMoveAction(target);
+        //         if (Input.GetMouseButton(0))
+        //             mover.StartMoveAction(target);
 
-                SetCursor(CursorType.Movement);
-                return true;
-            }
-            return false;
-        }
+        //         SetCursor(CursorType.Movement);
+        //         return true;
+        //     }
+        //     return false;
+        // }
 
-        private float GetPathLenght(NavMeshPath path)
-        {
-            float total = 0;
+        // private float GetPathLenght(NavMeshPath path)
+        // {
+        //     float total = 0;
 
-            if (path.corners.Length < 2) return total;
+        //     if (path.corners.Length < 2) return total;
 
-            for (int i = 0; i < path.corners.Length - 1; i++)
-            {
-                total += Vector3.Distance(path.corners[i], path.corners[i + 1]);
-            }
-            return total;
-        }
+        //     for (int i = 0; i < path.corners.Length - 1; i++)
+        //     {
+        //         total += Vector3.Distance(path.corners[i], path.corners[i + 1]);
+        //     }
+        //     return total;
+        // }
 
-        private bool RaycastNavMesh(out Vector3 target)
-        {
-            target = new Vector3();
+        // private bool RaycastNavMesh(out Vector3 target)
+        // {
+        //     target = new Vector3();
 
-            RaycastHit hit;
-            bool hashit = Physics.Raycast(GetMouseRay(), out hit);
+        //     RaycastHit hit;
+        //     bool hashit = Physics.Raycast(GetMouseRay(), out hit);
 
-            if (!hashit) return false;
-            NavMeshHit navMeshHit;
+        //     if (!hashit) return false;
+        //     NavMeshHit navMeshHit;
 
-            bool hasCastToNavMesh = NavMesh.SamplePosition(hit.point, out navMeshHit, maxNavMeshProjectionDistance, NavMesh.AllAreas);
+        //     bool hasCastToNavMesh = NavMesh.SamplePosition(hit.point, out navMeshHit, maxNavMeshProjectionDistance, NavMesh.AllAreas);
 
-            if (!hasCastToNavMesh) return false;
+        //     if (!hasCastToNavMesh) return false;
 
-            target = navMeshHit.position;
+        //     target = navMeshHit.position;
 
-            return true;
-        }
+        //     return true;
+        // }
 
         private RaycastHit[] RaycastAllSorted()
         {

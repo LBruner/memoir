@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using RPG.Quests;
-using RPG.UI;
+﻿using RPG.Quests;
 using UnityEngine;
 
 namespace RPG.UI.Quests
@@ -25,7 +22,6 @@ namespace RPG.UI.Quests
                 QuestStatus status = GetComponent<QuestItemUI>().GetQuestStatus();
                 tooltip.GetComponent<QuestTooltipUI>().Setup(status);
             }
-
         }
     }
 }

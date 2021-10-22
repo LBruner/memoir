@@ -10,6 +10,6 @@ namespace RPG.Control
         Pickup,
         FullPickup,
         Dialogue,
-        FarConversant
+        FarConversant,
     }
 }
