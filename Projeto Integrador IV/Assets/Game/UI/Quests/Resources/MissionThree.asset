@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MissionThree
   m_EditorClassIdentifier: 
   objectives:
-  - reference: a
+  - reference: 1
     description: "Assuste um drag\xE3o"
   rewards: []

@@ -35,36 +35,38 @@ namespace RPG.Control
                 return;
             }
 
-            if (InteractWithUI())
-            {
-                return;
-            }
 
             if (InteractWithComponent())
             {
                 return;
             }
 
-            // if (InteractWithMovement()) { return; }
+            //  if (InteractWithMovement()) { return; }
+
+
+            if (InteractWithUI())
+            {
+                return;
+            }
 
             SetCursor(CursorType.None);
         }
 
         private bool InteractWithUI()
         {
-            List<RaycastResult> hits = RaycastScreenElements();
+            // List<RaycastResult> hits = RaycastScreenElements();
 
-            if (hits.Count > 0)
-            {
-                foreach (var go in hits)
-                {
-                    if (go.gameObject.GetComponent<AIConversant>() || go.gameObject.GetComponent<MapQuest>())
-                    {
-                        InteractWithComponent();
-                        return false;
-                    }
-                }
-            }
+            // if (hits.Count > 0)
+            // {
+            //     foreach (var go in hits)
+            //     {
+            //         if (go.gameObject.GetComponent<AIConversant>() || go.gameObject.GetComponent<MapQuest>())
+            //         {
+            //             InteractWithComponent();
+            //             return false;
+            //         }
+            //     }
+            // }
 
             if (EventSystem.current.IsPointerOverGameObject())
             {

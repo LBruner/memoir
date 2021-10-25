@@ -220,7 +220,6 @@ namespace RPG.Dialogue
 
         public void RestoreState(object state)
         {
-            Debug.Log((bool)state);
             this.finishedStartingDialogue = (bool)state;
         }
     }

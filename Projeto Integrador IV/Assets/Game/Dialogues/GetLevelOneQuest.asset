@@ -104,7 +104,7 @@ MonoBehaviour:
     y: 372
     width: 200
     height: 100
-  onEnterAction: CompleteGT
+  onEnterAction: CompleteGettingStarted
   onExitAction: UpdateUI
   condition:
     predicate: 
@@ -131,7 +131,7 @@ MonoBehaviour:
     y: 272
     width: 200
     height: 100
-  onEnterAction: Getting Started
+  onEnterAction: AddGettingStarted
   onExitAction: UpdateUI
   condition:
     predicate: 
@@ -305,13 +305,13 @@ MonoBehaviour:
   m_Name: 018d6145-ec0f-40be-821f-f1c392a4b592
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: '[completar missao 1] '
+  text: '[completar getting started] '
   children:
   - 46fc7f3e-6c86-4600-9bc6-6f480c7fde87
   rect:
     serializedVersion: 2
-    x: 648
-    y: 458
+    x: 657
+    y: 460
     width: 200
     height: 100
   onEnterAction: 
@@ -369,7 +369,7 @@ MonoBehaviour:
     width: 200
     height: 100
   onEnterAction: 
-  onExitAction: MissionTwo
+  onExitAction: AddMissionTwo
   condition:
     predicate: 
     parameters: []
@@ -505,7 +505,7 @@ MonoBehaviour:
     y: 743
     width: 200
     height: 100
-  onEnterAction: MissionThree
+  onEnterAction: AddMissionThree
   onExitAction: 
   condition:
     predicate: 
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Name: 4d552706-6e5c-4d85-a80b-5af7ccda4d23
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "[ Miss\xE3o Getting Started completada ]            "
+  text: '[ Mission two concluida ]            '
   children: []
   rect:
     serializedVersion: 2
@@ -614,7 +614,7 @@ MonoBehaviour:
     y: 466
     width: 200
     height: 100
-  onEnterAction: CompleteQuest2
+  onEnterAction: CompleteMissionTwo
   onExitAction: UpdateUI
   condition:
     predicate: 

@@ -13,6 +13,7 @@ namespace RPG.Dialogue
             if (ActionToTrigger == Action)
             {
                 action?.Invoke();
+                GameManager.Instance.UpdateMenuQuest();
             }
         }
     }

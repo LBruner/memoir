@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7981910471844487663}
   - component: {fileID: 7981910471844487656}
   - component: {fileID: 7981910471844487661}
-  - component: {fileID: 7981910471527209020}
   - component: {fileID: 7981910471527208963}
+  - component: {fileID: 7981910471527209020}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -115,33 +115,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7981910471527209020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659351600599967987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ecea4d5b5b3dd4cb883f6ca6bfc94f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: 1
-  quest: {fileID: 11400000, guid: 107330e5009644049a74e93909c53d4f, type: 2}
-  blockedTooltip: {fileID: 2050042212510784345, guid: 8f8434fe83bf8a0419d3c4107ba9ae29,
-    type: 3}
-  unlockedTooltip: {fileID: 2050042212510784345, guid: c97f2e7dd354c7541b0617142cbf5d9d,
-    type: 3}
-  completedTooltip: {fileID: 2050042212510784345, guid: 2d41c211f882b19439d735529767f9f0,
-    type: 3}
-  image: {fileID: 7981910471844487661}
-  blockedStatus: {fileID: 21300000, guid: 4b7565240d21e6c4fb04e7743bf0c418, type: 3}
-  unlockedStatus: {fileID: 21300000, guid: 0dabb10409b85cf4e8514a728f2ec015, type: 3}
-  completedStatus: {fileID: 21300000, guid: 4bffce79384d64649b8152ccef2ee04e, type: 3}
-  isQuestFinished: 0
-  questStatus: 1
-  spawner: {fileID: 1682540305313197050}
 --- !u!114 &7981910471527208963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +169,32 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7981910471527209020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659351600599967987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ecea4d5b5b3dd4cb883f6ca6bfc94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: 1
+  quest: {fileID: 11400000, guid: 107330e5009644049a74e93909c53d4f, type: 2}
+  blockedTooltip: {fileID: 2050042212510784345, guid: 8f8434fe83bf8a0419d3c4107ba9ae29,
+    type: 3}
+  unlockedTooltip: {fileID: 2050042212510784345, guid: c97f2e7dd354c7541b0617142cbf5d9d,
+    type: 3}
+  completedTooltip: {fileID: 2050042212510784345, guid: 2d41c211f882b19439d735529767f9f0,
+    type: 3}
+  image: {fileID: 7981910471844487661}
+  blockedStatus: {fileID: 21300000, guid: 4b7565240d21e6c4fb04e7743bf0c418, type: 3}
+  unlockedStatus: {fileID: 21300000, guid: 0dabb10409b85cf4e8514a728f2ec015, type: 3}
+  completedStatus: {fileID: 21300000, guid: 4bffce79384d64649b8152ccef2ee04e, type: 3}
+  questStatus: 1
+  spawner: {fileID: 1682540305313197050}
 --- !u!1 &1682540305313197049
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +210,7 @@ GameObject:
   - component: {fileID: 9128857353702197514}
   - component: {fileID: 1682540305313197054}
   m_Layer: 0
-  m_Name: GettingStarted
+  m_Name: Mission
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

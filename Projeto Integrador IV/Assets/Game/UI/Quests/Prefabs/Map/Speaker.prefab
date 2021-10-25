@@ -1,5 +1,125 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &891912985838895685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4189392293614870096}
+  - component: {fileID: 4009645484649922838}
+  - component: {fileID: 6065371316180415376}
+  - component: {fileID: 8232999631258583194}
+  - component: {fileID: 4768849351741552442}
+  m_Layer: 0
+  m_Name: MissionThree
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4189392293614870096
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891912985838895685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4006682979489593125}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4009645484649922838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891912985838895685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b26de899c145244790ffd7e2afeb706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: c804366a8a5ace64283f694b42521a25, type: 2}
+--- !u!114 &6065371316180415376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891912985838895685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Action: AddMissionThree
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4009645484649922838}
+        m_MethodName: GiveQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8232999631258583194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891912985838895685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6880513b5cffc4f4b852ee1f50cba6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: c804366a8a5ace64283f694b42521a25, type: 2}
+  objective: 1
+--- !u!114 &4768849351741552442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891912985838895685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Action: CompleteMissionThree
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8232999631258583194}
+        m_MethodName: CompleteObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4006682979489593126
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,17 +130,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4006682979489593125}
   - component: {fileID: 4006682979489593123}
+  - component: {fileID: 5645502670411857464}
   - component: {fileID: 5645502670411857466}
   - component: {fileID: 5645502670411857469}
-  - component: {fileID: 5645502670411857464}
-  - component: {fileID: 5645502670411857467}
-  - component: {fileID: 5645502671313212532}
-  - component: {fileID: 5645502671313212523}
-  - component: {fileID: 5645502671313212522}
-  - component: {fileID: 5645502671313212521}
-  - component: {fileID: 5645502671313212527}
+  - component: {fileID: 3738407139867003891}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Conversant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37,7 +152,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5645502672515966089}
+  - {fileID: 7749974035187701118}
+  - {fileID: 816091407975828183}
+  - {fileID: 4189392293614870096}
   m_Father: {fileID: 4018405978726757421}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -54,6 +171,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4006682979489593126}
   m_CullTransparentMesh: 0
+--- !u!114 &5645502670411857464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4006682979489593126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 393f2c5bdfb53f440b13ae4731b3e17f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!50 &5645502670411857466
 Rigidbody2D:
   serializedVersion: 4
@@ -91,36 +237,7 @@ CircleCollider2D:
   m_Offset: {x: -0.0000009536743, y: -0.00000047683716}
   serializedVersion: 2
   m_Radius: 50
---- !u!114 &5645502670411857464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4006682979489593126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 393f2c5bdfb53f440b13ae4731b3e17f, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!114 &5645502670411857467
+--- !u!114 &3738407139867003891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,114 +252,6 @@ MonoBehaviour:
   conversantName: Guia
   conversantColor: {r: 0, g: 0.60473037, b: 1, a: 1}
   dialogue: {fileID: 11400000, guid: 2e6a2da7d405be64c87f85cb7da2b665, type: 2}
---- !u!114 &5645502671313212532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4006682979489593126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6880513b5cffc4f4b852ee1f50cba6d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 107330e5009644049a74e93909c53d4f, type: 2}
-  objective: a
---- !u!114 &5645502671313212523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4006682979489593126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Action: CompleteQuest
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5645502671313212532}
-        m_MethodName: CompleteObjective
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5645502671313212522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4006682979489593126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b26de899c145244790ffd7e2afeb706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 7711d20ce36f1f54490aeb6105cb65d1, type: 2}
---- !u!114 &5645502671313212521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4006682979489593126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Action: MissionTwo
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5645502671313212522}
-        m_MethodName: GiveQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5645502671313212527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4006682979489593126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Action: UpdateUI
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5645502671313212522}
-        m_MethodName: UpdateUI
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &4018405978726757420
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +262,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4018405978726757421}
   - component: {fileID: 4018405978726757409}
-  - component: {fileID: 4018405978726757423}
   - component: {fileID: 4018405978726757422}
   - component: {fileID: 6786252739191625439}
   - component: {fileID: 4018405978726757419}
@@ -292,22 +300,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4018405978726757420}
   m_CullTransparentMesh: 0
---- !u!114 &4018405978726757423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4018405978726757420}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7ba12b03fdd86447817324efc9885cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tooltipPrefab: {fileID: 2050042212510784345, guid: 8f8434fe83bf8a0419d3c4107ba9ae29,
-    type: 3}
-  isMenu: 1
-  quest: {fileID: 0}
 --- !u!114 &4018405978726757422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,7 +358,7 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!1 &5645502671426084889
+--- !u!1 &4150407484986997647
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,150 +366,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5645502671426084888}
-  - component: {fileID: 5645502671426084895}
-  - component: {fileID: 5645502671426084894}
-  - component: {fileID: 5645502671426084892}
-  - component: {fileID: 5645502671426084893}
+  - component: {fileID: 7749974035187701118}
+  - component: {fileID: 3454028006457334808}
+  - component: {fileID: 3945427965602112376}
+  - component: {fileID: 3869594366933665797}
+  - component: {fileID: 7235887638758962881}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GettingStarted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5645502671426084888
+--- !u!224 &7749974035187701118
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645502671426084889}
+  m_GameObject: {fileID: 4150407484986997647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5645502672515966089}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5645502671426084895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645502671426084889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Action: Getting Started
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5645502671426084894}
-        m_MethodName: GiveQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5645502671426084894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645502671426084889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b26de899c145244790ffd7e2afeb706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 107330e5009644049a74e93909c53d4f, type: 2}
---- !u!114 &5645502671426084892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645502671426084889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Action: CompleteGT
-  action:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5645502671426084893}
-        m_MethodName: CompleteObjective
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5645502671426084893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645502671426084889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6880513b5cffc4f4b852ee1f50cba6d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 107330e5009644049a74e93909c53d4f, type: 2}
-  objective: a
---- !u!1 &5645502672515966090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5645502672515966089}
-  - component: {fileID: 5645502672515966093}
-  - component: {fileID: 5645502672515966094}
-  - component: {fileID: 5645502672515966095}
-  - component: {fileID: 5645502672515966088}
-  m_Layer: 0
-  m_Name: MissionThree
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5645502672515966089
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645502672515966090}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5645502671426084888}
   m_Father: {fileID: 4006682979489593125}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -526,23 +397,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5645502672515966093
+--- !u!114 &3454028006457334808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645502672515966090}
+  m_GameObject: {fileID: 4150407484986997647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b26de899c145244790ffd7e2afeb706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 107330e5009644049a74e93909c53d4f, type: 2}
+--- !u!114 &3945427965602112376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4150407484986997647}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Action: MissionThree
+  Action: AddGettingStarted
   action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5645502672515966094}
+      - m_Target: {fileID: 3454028006457334808}
         m_MethodName: GiveQuest
         m_Mode: 1
         m_Arguments:
@@ -553,36 +437,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5645502672515966094
+--- !u!114 &3869594366933665797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645502672515966090}
+  m_GameObject: {fileID: 4150407484986997647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b26de899c145244790ffd7e2afeb706, type: 3}
+  m_Script: {fileID: 11500000, guid: 6880513b5cffc4f4b852ee1f50cba6d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: c804366a8a5ace64283f694b42521a25, type: 2}
---- !u!114 &5645502672515966095
+  quest: {fileID: 11400000, guid: 107330e5009644049a74e93909c53d4f, type: 2}
+  objective: 1
+--- !u!114 &7235887638758962881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645502672515966090}
+  m_GameObject: {fileID: 4150407484986997647}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Action: CompleteQuest2
+  Action: CompleteGettingStarted
   action:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5645502672515966088}
+      - m_Target: {fileID: 3869594366933665797}
         m_MethodName: CompleteObjective
         m_Mode: 1
         m_Arguments:
@@ -593,13 +478,92 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5645502672515966088
+--- !u!1 &4793967062523553600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 816091407975828183}
+  - component: {fileID: 4565472859453190987}
+  - component: {fileID: 118902042432332501}
+  - component: {fileID: 4381463128033171884}
+  - component: {fileID: 6534894643989607344}
+  m_Layer: 0
+  m_Name: MissionTwo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &816091407975828183
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793967062523553600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4006682979489593125}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4565472859453190987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5645502672515966090}
+  m_GameObject: {fileID: 4793967062523553600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b26de899c145244790ffd7e2afeb706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 7711d20ce36f1f54490aeb6105cb65d1, type: 2}
+--- !u!114 &118902042432332501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793967062523553600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Action: AddMissionTwo
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4565472859453190987}
+        m_MethodName: GiveQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4381463128033171884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793967062523553600}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6880513b5cffc4f4b852ee1f50cba6d5, type: 3}
@@ -607,3 +571,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: 7711d20ce36f1f54490aeb6105cb65d1, type: 2}
   objective: 1
+--- !u!114 &6534894643989607344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4793967062523553600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4cbd0d7bd74324cb9b15da97038537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Action: CompleteMissionTwo
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4381463128033171884}
+        m_MethodName: CompleteObjective
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

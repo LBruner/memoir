@@ -80,7 +80,6 @@ namespace RPG.UI.Quests
             }
             if (rewardText != null)
             {
-                Debug.Log(GetRewardText(quest));
                 rewardText.text = GetRewardText(quest);
             }
         }

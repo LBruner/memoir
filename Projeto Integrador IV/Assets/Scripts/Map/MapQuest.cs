@@ -18,14 +18,13 @@ namespace RPG.Map
         [SerializeField] Sprite blockedStatus;
         [SerializeField] Sprite unlockedStatus;
         [SerializeField] Sprite completedStatus;
-        [SerializeField] bool isQuestFinished = false;
         [SerializeField] QuestStatus questStatus;
         [SerializeField] QuestTooltipSpawner spawner;
 
 
         public void LoadScene()
         {
-            FindObjectOfType<GameManager>().Load(sceneToLoad);
+            GameManager.Instance.Load(sceneToLoad);
         }
         private void OnEnable()
         {
@@ -59,7 +58,6 @@ namespace RPG.Map
         public void SetIsQuestFinished()
         {
             setQuestStatus(QuestStatus.Complete);
-            isQuestFinished = true;
             SetSpawnObject();
         }
         public void setQuestStatus(QuestStatus status)
@@ -134,7 +132,11 @@ namespace RPG.Map
         public bool HandleRaycast(PlayerController callingController)
         {
             if (questStatus != QuestStatus.Blocked)
+            {
+                GetComponent<Button>().enabled = true;
                 return true;
+            }
+            GetComponent<Button>().enabled = false;
             return false;
         }
     }
