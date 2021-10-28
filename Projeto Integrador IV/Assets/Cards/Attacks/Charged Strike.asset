@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8907aba483d10e543911ec8c0b5efc02, type: 3}
+  m_Name: Charged Strike
+  m_EditorClassIdentifier: 
+  id: 6c1d1b5e0a9e62b4a8d935f42ce48745
+  Name: Charged Strike
+  Artwork: {fileID: 21300000, guid: 28f37e810c5f4b8448485cc7890e9630, type: 3}
+  Cost: 3
+  Targetable: 1
+  Type: 0
+  Used: 0
+  CanEvolve: 1
+  Level: 1
+  Experience: 0
+  Effects: []
+  MinDamage: 5
+  MaxDamage: 10

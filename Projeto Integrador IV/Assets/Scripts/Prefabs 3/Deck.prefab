@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4045087162255506865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4045087162255506867}
+  - component: {fileID: 4045087162255506866}
+  m_Layer: 0
+  m_Name: Deck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4045087162255506867
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4045087162255506865}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.82599515, y: -1.8036307, z: -26.949707}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4045087162255506866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4045087162255506865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e33d056e1eedd14cb3f541197599d66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  startingDeck: {fileID: 11400000, guid: 401d0651fd4d3f94b8a9695738f50553, type: 2}
+  Cards:
+  - {fileID: 11400000, guid: a8e82ee030cb9da499054278ee4713f2, type: 2}
+  - {fileID: 11400000, guid: a8e82ee030cb9da499054278ee4713f2, type: 2}
+  - {fileID: 11400000, guid: a8e82ee030cb9da499054278ee4713f2, type: 2}
+  - {fileID: 11400000, guid: 6c1d1b5e0a9e62b4a8d935f42ce48745, type: 2}
+  - {fileID: 11400000, guid: 6c1d1b5e0a9e62b4a8d935f42ce48745, type: 2}
+  - {fileID: 11400000, guid: 250252d853de153438382acd6230aa3f, type: 2}
+  - {fileID: 11400000, guid: 250252d853de153438382acd6230aa3f, type: 2}
+  - {fileID: 11400000, guid: 250252d853de153438382acd6230aa3f, type: 2}
+  - {fileID: 11400000, guid: d82050b484a84e1469daf160abee498d, type: 2}
+  - {fileID: 11400000, guid: d82050b484a84e1469daf160abee498d, type: 2}
+  Deck: []
+  Discard: []
+  deckText: {fileID: 0}
+  discardText: {fileID: 0}
+  HandParent: {fileID: 0}
+  DrawPanel: {fileID: 0}
+  DiscardPanel: {fileID: 0}
+  canvasCamera: {fileID: 0}
+  CardPrefab: {fileID: 3327255026806444599, guid: 2011e7111b03b4240899f554d72d0f5f,
+    type: 3}
+  PlaceholderCardPrefab: {fileID: 3327255026806444599, guid: 63d56e7712888dc4b892b89b31b86e65,
+    type: 3}
