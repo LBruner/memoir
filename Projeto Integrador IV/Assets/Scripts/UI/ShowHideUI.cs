@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 namespace RPG.UI
@@ -11,7 +12,7 @@ namespace RPG.UI
 
         void Start()
         {
-            uiContainer.SetActive(false);
+            uiContainer.gameObject.SetActive(false);
         }
 
         void Update()

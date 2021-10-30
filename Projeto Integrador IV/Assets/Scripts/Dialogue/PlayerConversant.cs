@@ -7,14 +7,15 @@ using RPG.Core;
 using RPG.Quests;
 using RPG.Saving;
 using RPG.UI;
+using UnityEngine.SceneManagement;
 
 namespace RPG.Dialogue
 {
-    public class PlayerConversant : MonoBehaviour, ISaveable
+    public class PlayerConversant : MonoBehaviour
     {
         [SerializeField] string playerName;
         [SerializeField] Color playerColor;
-        [SerializeField] Quest[] startingQuests;
+        [SerializeField] Sprite playerImage;
         [SerializeField] Dialogue startingDialogue;
         Dialogue currentDialogue;
 
@@ -26,6 +27,7 @@ namespace RPG.Dialogue
         bool finishedStartingDialogue = false;
 
         public event Action onConversationUpdated;
+        public List<Mover> movers = new List<Mover>();
 
         private void Awake()
         {
@@ -36,14 +38,6 @@ namespace RPG.Dialogue
             // FindObjectOfType<QuestCompletion>().CompleteDefaultObjective(test);
         }
 
-        private void Start()
-        {
-            if (!finishedStartingDialogue)
-            {
-                FindObjectOfType<PlayerConversant>().StartDialogue(new AIConversant("AlmA", Color.white), startingDialogue);
-                finishedStartingDialogue = true;
-            }
-        }
         private void OnDisable()
         {
             CancelInvoke();
@@ -55,6 +49,8 @@ namespace RPG.Dialogue
 
         public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {
+            SetMoveArrowState(false);
+
             isTalking = true;
             currentConversant = newConversant;
             currentDialogue = newDialogue;
@@ -65,8 +61,34 @@ namespace RPG.Dialogue
                 onConversationUpdated.Invoke();
         }
 
+        public void SetMoveArrowState(bool state)
+        {
+            if (state)
+            {
+                if (movers.Count <= 0) return;
+
+                foreach (Mover arrow in movers)
+                {
+                    arrow.gameObject.SetActive(true);
+                }
+
+                movers.Clear();
+            }
+            else
+            {
+                foreach (Mover arrow in FindObjectsOfType<Mover>())
+                {
+                    movers.Add(arrow);
+                    arrow.gameObject.SetActive(false);
+                }
+            }
+        }
+
         public void Quit()
         {
+            SetMoveArrowState(true);
+            FindObjectOfType<DialogueUI>().DisableDialogueImages();
+
             currentDialogue = null;
             TriggerExitAction();
             currentNode = null;
@@ -102,6 +124,16 @@ namespace RPG.Dialogue
                 return "";
 
             return currentNode.GetText();
+        }
+
+        public Sprite GetPlayerImage()
+        {
+            return playerImage;
+        }
+
+        public Sprite GetEnemyImage()
+        {
+            return currentConversant.GetImage();
         }
 
         public string GetCurrentConversantName()
@@ -211,16 +243,6 @@ namespace RPG.Dialogue
             {
                 trigger.Trigger(action);
             }
-        }
-
-        public object CaptureState()
-        {
-            return finishedStartingDialogue;
-        }
-
-        public void RestoreState(object state)
-        {
-            this.finishedStartingDialogue = (bool)state;
         }
     }
 }

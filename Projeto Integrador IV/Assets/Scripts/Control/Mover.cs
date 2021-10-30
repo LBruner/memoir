@@ -2,6 +2,10 @@ using UnityEngine;
 using RPG.SceneManagement;
 using System.Collections;
 using RPG.Control;
+using UnityEngine.UI;
+using System;
+using RPG.Saving;
+using RPG.Core;
 
 namespace RPG.Dialogue
 {
@@ -17,6 +21,7 @@ namespace RPG.Dialogue
                 gameObject.SetActive(false);
                 return;
             }
+
             thisCam = GetComponentInParent<Camera>().gameObject;
         }
 
@@ -28,9 +33,17 @@ namespace RPG.Dialogue
         private IEnumerator Fade()
         {
             Fader fader = FindObjectOfType<Fader>();
-            yield return fader.FadeOut(.5f);
-            destinationCam.SetActive(true);
-            thisCam.SetActive(false);
+            yield return fader.FadeOut(.3f);
+
+
+            thisCam.GetComponent<MoverSavingHelper>().SetWasEnabled(false);
+            destinationCam.GetComponent<MoverSavingHelper>().SetWasEnabled(true);
+
+            destinationCam.gameObject.SetActive(true);
+            GameManager.Instance.UpdateMenuQuest();
+            FindObjectOfType<SavingWrapper>().Save();
+            thisCam.gameObject.SetActive(false);
+
             yield return fader.FadeIn(.9f);
         }
 

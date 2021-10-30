@@ -11,5 +11,6 @@ namespace RPG.Control
         FullPickup,
         Dialogue,
         FarConversant,
+        Chatting
     }
 }

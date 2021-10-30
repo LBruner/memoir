@@ -75,7 +75,6 @@ namespace RPG.Dialogue
             {
                 if (!node.IsPlayerSpeaking())
                 {
-                    Debug.Log("FASJO");
                     yield return node;
                 }
             }
