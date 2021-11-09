@@ -126,7 +126,7 @@ namespace RPG.Map
             {
                 return CursorType.Combat;
             }
-            return CursorType.UI;
+            return CursorType.FarConversant;
         }
 
         public bool HandleRaycast(PlayerController callingController)

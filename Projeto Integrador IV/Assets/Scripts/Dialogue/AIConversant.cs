@@ -9,6 +9,7 @@ namespace RPG.Dialogue
     {
         [SerializeField] string conversantName;
         [SerializeField] Color conversantColor;
+        [SerializeField] Sprite enemyImage;
         [SerializeField] Dialogue dialogue = null;
 
         public AIConversant(string name, Color color)
@@ -32,7 +33,7 @@ namespace RPG.Dialogue
             if (Input.GetMouseButton(0))
             {
                 PlayerConversant conversant = FindObjectOfType<PlayerConversant>();
-                if (callingController != null)
+                if (conversant != null)
                     conversant.StartDialogue(this, dialogue);
             }
             return true;
@@ -43,9 +44,19 @@ namespace RPG.Dialogue
             return conversantName;
         }
 
+        public Dialogue GetDialogue()
+        {
+            return dialogue;
+        }
+
         public Color GetColor()
         {
             return conversantColor;
+        }
+
+        public Sprite GetImage()
+        {
+            return enemyImage;
         }
     }
 }

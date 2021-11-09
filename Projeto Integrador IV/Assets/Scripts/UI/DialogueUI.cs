@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using RPG.Dialogue;
@@ -12,6 +12,8 @@ namespace RPG.UI
     {
         [SerializeField] TextMeshProUGUI conversantName;
         [SerializeField] TextMeshProUGUI AIText;
+        [SerializeField] Image playerImage;
+        [SerializeField] Image enemyImage;
         PlayerConversant playerConversant;
         [SerializeField] Button nextButton;
         [SerializeField] Button quitButton;
@@ -61,6 +63,16 @@ namespace RPG.UI
             }
             conversantName.text = playerConversant.GetCurrentConversantName();
             conversantName.color = playerConversant.GetCurrentConversantColor();
+
+            if (playerConversant.GetEnemyImage() != null)
+            {
+                playerImage.gameObject.SetActive(true);
+                enemyImage.gameObject.SetActive(true);
+                playerImage.sprite = playerConversant.GetPlayerImage();
+                enemyImage.sprite = playerConversant.GetEnemyImage();
+            }
+
+
             AIResponse.SetActive(!playerConversant.IsChoosing());
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
 
@@ -92,7 +104,6 @@ namespace RPG.UI
             string fullText = conversant.GetText();
             if (fullText == "")
             {
-                Debug.Log("l");
                 playerConversant.Next();
             }
             for (int i = 0; i < fullText.Length; i++)
@@ -145,6 +156,17 @@ namespace RPG.UI
             GameObject popup = Instantiate(popupDialogue, popupParent.transform);
 
             popup.GetComponent<DialoguePopup>().SetUpPopup(textToDisplay, playerConversant.GetCurrentConversantName(), playerConversant.GetCurrentConversantColor());
+        }
+
+        public void SetQuitButtonState(bool state)
+        {
+            quitButton.gameObject.SetActive(state);
+        }
+
+        public void DisableDialogueImages()
+        {
+            playerImage.gameObject.SetActive(false);
+            enemyImage.gameObject.SetActive(false);
         }
     }
 }
