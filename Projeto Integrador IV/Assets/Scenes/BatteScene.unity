@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -630,6 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 4221161107690243906}
   enemy: {fileID: 6869911031923263235}
+  playerDeck: {fileID: 1655032299}
   turn: 0
   energyText: {fileID: 700400987}
   turnText: {fileID: 778578247}
@@ -2537,6 +2538,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1655032298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1655032300}
+  - component: {fileID: 1655032299}
+  m_Layer: 0
+  m_Name: Deck System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1655032299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655032298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bec5a3a2f04ccd94f8df0bffd1197e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 4221161107690243906}
+  playerDeck: {fileID: 1538726038}
+  Deck: []
+  Discard: []
+  deckText: {fileID: 621668790}
+  discardText: {fileID: 463881993}
+  HandParent: {fileID: 337372419}
+  DrawPanel: {fileID: 1043732794}
+  DiscardPanel: {fileID: 320342282}
+  canvasCamera: {fileID: 645765787}
+  CardPrefab: {fileID: 3327255026806444599, guid: 2011e7111b03b4240899f554d72d0f5f,
+    type: 3}
+  PlaceholderCardPrefab: {fileID: 3327255026806444599, guid: 63d56e7712888dc4b892b89b31b86e65,
+    type: 3}
+--- !u!4 &1655032300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655032298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.966156, y: 0.22136097, z: 55.299805}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698713353
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,41 +3082,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deck
       objectReference: {fileID: 0}
-    - target: {fileID: 4045087162255506866, guid: a3b1fad88f12bd04a85a2a286593ebb6,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 4221161107690243906}
-    - target: {fileID: 4045087162255506866, guid: a3b1fad88f12bd04a85a2a286593ebb6,
-        type: 3}
-      propertyPath: deckText
-      value: 
-      objectReference: {fileID: 621668790}
-    - target: {fileID: 4045087162255506866, guid: a3b1fad88f12bd04a85a2a286593ebb6,
-        type: 3}
-      propertyPath: DrawPanel
-      value: 
-      objectReference: {fileID: 1043732794}
-    - target: {fileID: 4045087162255506866, guid: a3b1fad88f12bd04a85a2a286593ebb6,
-        type: 3}
-      propertyPath: HandParent
-      value: 
-      objectReference: {fileID: 337372419}
-    - target: {fileID: 4045087162255506866, guid: a3b1fad88f12bd04a85a2a286593ebb6,
-        type: 3}
-      propertyPath: discardText
-      value: 
-      objectReference: {fileID: 463881993}
-    - target: {fileID: 4045087162255506866, guid: a3b1fad88f12bd04a85a2a286593ebb6,
-        type: 3}
-      propertyPath: DiscardPanel
-      value: 
-      objectReference: {fileID: 320342282}
-    - target: {fileID: 4045087162255506866, guid: a3b1fad88f12bd04a85a2a286593ebb6,
-        type: 3}
-      propertyPath: canvasCamera
-      value: 
-      objectReference: {fileID: 645765787}
     - target: {fileID: 4045087162255506867, guid: a3b1fad88f12bd04a85a2a286593ebb6,
         type: 3}
       propertyPath: m_RootOrder
@@ -3130,9 +3153,9 @@ PrefabInstance:
       objectReference: {fileID: 1538726038}
     - target: {fileID: 1273982265425829550, guid: 0514c40055f69d3489462b2e1cf50d56,
         type: 3}
-      propertyPath: CardSaveManager
+      propertyPath: DeckSystem
       value: 
-      objectReference: {fileID: 4221161107690243905}
+      objectReference: {fileID: 1655032299}
     - target: {fileID: 2832160245068918056, guid: 0514c40055f69d3489462b2e1cf50d56,
         type: 3}
       propertyPath: m_Name
@@ -3195,18 +3218,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0514c40055f69d3489462b2e1cf50d56, type: 3}
---- !u!114 &4221161107690243905 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4960674298508421225, guid: 0514c40055f69d3489462b2e1cf50d56,
-    type: 3}
-  m_PrefabInstance: {fileID: 4221161107690243904}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 304fa4958b96e164f94152ec5074feaa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4221161107690243906 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1273982265425829550, guid: 0514c40055f69d3489462b2e1cf50d56,

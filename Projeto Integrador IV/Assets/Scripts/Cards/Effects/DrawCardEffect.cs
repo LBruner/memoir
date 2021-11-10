@@ -9,7 +9,7 @@ public class DrawCardEffect : CardEffect
 
 	public override void ExecuteEffect(Card card, Player player)
 	{
-		player.Deck.DrawCards(DrawAmount);
+		player.DeckSystem.DrawCards(DrawAmount);
 	}
 
 	public override void ExecuteEffect(Card card, Enemy enemy)

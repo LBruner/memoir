@@ -39,8 +39,10 @@ public class Player : MonoBehaviour
 
 	[Header("Deck")]
 	public PlayerDeck Deck;
+	public DeckSystem DeckSystem;
 
 	[Header("Equipment")]
+	public List<Item> Items;
 	public EquipmentPanel EquipmentPanel;
 
 	[Header("System")]
@@ -48,7 +50,11 @@ public class Player : MonoBehaviour
 
 	private void Awake()
 	{
+		HealthModifier.BaseValue = 40;
+		EnergyModifier.BaseValue = 3; 
+
 		CurrentHealth = MaxHealth;
+		CurrentEnergy = MaxEnergy;
 
 		if (CardSaveManager != null)
 		{
@@ -78,7 +84,7 @@ public class Player : MonoBehaviour
 		if (EquipmentPanel.AddItem(item))
 		{
 			Debug.Log("Equipping: " + item.ItemName);
-
+			Items.Add(item);
 			item.Equip(this);
 		}
 	}
@@ -86,6 +92,10 @@ public class Player : MonoBehaviour
 	public void Equip(EquippableItem item, int index)
 	{
 		if (EquipmentPanel.AddItem(item, index))
+		{
+			Debug.Log("Equipping: " + item.ItemName + " at slot " + index);
+			Items.Insert(index, item);
 			item.Equip(this);
+		}
 	}
 }

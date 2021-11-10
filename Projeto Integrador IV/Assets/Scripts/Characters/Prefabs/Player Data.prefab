@@ -51,18 +51,26 @@ MonoBehaviour:
   Defense: 0
   HealthModifier:
     BaseValue: 40
+    statModifiers: []
   EnergyModifier:
     BaseValue: 3
+    statModifiers: []
   DamageModifier:
     BaseValue: 0
+    statModifiers: []
   DamageReducitonModifier:
     BaseValue: 0
+    statModifiers: []
   DrawModifier:
     BaseValue: 0
+    statModifiers: []
   CostModifier:
     BaseValue: 0
+    statModifiers: []
   Deck: {fileID: 0}
-  CardSaveManager: {fileID: 0}
+  DeckSystem: {fileID: 0}
+  EquipmentPanel: {fileID: 0}
+  CardSaveManager: {fileID: 4960674298508421225}
 --- !u!114 &4960674298508421225
 MonoBehaviour:
   m_ObjectHideFlags: 0
