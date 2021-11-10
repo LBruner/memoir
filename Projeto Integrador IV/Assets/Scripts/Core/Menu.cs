@@ -10,8 +10,11 @@ namespace RPG.Core
         [SerializeField] AudioMixer mixer;
 
         [SerializeField] TMP_Dropdown resolutionDropdown;
+        [SerializeField] int targetFPS;
 
         Resolution[] resolutions;
+
+        bool capFramerate = false;
 
         private void Start()
         {
@@ -35,6 +38,8 @@ namespace RPG.Core
             resolutionDropdown.AddOptions(options);
             resolutionDropdown.value = currentResolutionIndex;
             resolutionDropdown.RefreshShownValue();
+
+            CapFramerate();
         }
 
         public void SetResolution(int resolutionIndex)
@@ -45,13 +50,23 @@ namespace RPG.Core
 
         public void SetVolume(float volume)
         {
-            Debug.Log("Oi");
             mixer.SetFloat("volume", volume);
         }
 
-        public void SetBrightness(float value)
+        public void CapFramerate()
         {
-            RenderSettings.ambientLight = new Color(value, value, value, 1.0f);
+            capFramerate = !capFramerate;
+
+            if (capFramerate)
+            {
+                QualitySettings.vSyncCount = 0;
+                Application.targetFrameRate = targetFPS;
+            }
+            else
+            {
+                QualitySettings.vSyncCount = 1;
+                Application.targetFrameRate = -1;
+            }
         }
 
         public void SetFullscreen(bool isFullscreen)
