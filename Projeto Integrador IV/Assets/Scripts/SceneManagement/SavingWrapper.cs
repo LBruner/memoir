@@ -14,6 +14,11 @@ namespace RPG.SceneManagement
 
         private void Awake()
         {
+            Teste();
+        }
+
+        public void Teste()
+        {
             StartCoroutine(LoadLastScene());
         }
 
@@ -41,7 +46,7 @@ namespace RPG.SceneManagement
 
             if (Input.GetKeyDown(KeyCode.H))
             {
-                DeletSavefile();
+                DeleteSavefile();
             }
         }
 
@@ -52,10 +57,10 @@ namespace RPG.SceneManagement
 
         public void Load()
         {
-            StartCoroutine(GetComponent<SavingSystem>().LoadLastScene(defaulSaveFile));
+            GetComponent<SavingSystem>().Load(defaulSaveFile);
         }
 
-        public void DeletSavefile()
+        public void DeleteSavefile()
         {
             GetComponent<SavingSystem>().Delete(defaulSaveFile);
         }

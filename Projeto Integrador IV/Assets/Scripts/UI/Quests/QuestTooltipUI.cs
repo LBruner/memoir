@@ -8,6 +8,8 @@ namespace RPG.UI.Quests
     public class QuestTooltipUI : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI title;
+        [SerializeField] TextMeshProUGUI locationTitle;
+        [SerializeField] TextMeshProUGUI completedObjectives;
         [SerializeField] Transform objectiveContainer;
         [SerializeField] GameObject objectivePrefab;
         [SerializeField] GameObject objectiveIncompletePrefab;
@@ -57,31 +59,11 @@ namespace RPG.UI.Quests
             return rewardText;
         }
 
-        public void SetupMenu(Quest quest)
+        public void SetupMenu(string locationName, int questNumber, int completedQuests)
         {
-            if (title != null)
-                title.text = quest.GetTitle();
-
-            if (objectiveContainer != null)
-            {
-                foreach (Transform item in objectiveContainer)
-                {
-                    Destroy(item.gameObject);
-                }
-
-                foreach (var objective in quest.GetObjectives())
-                {
-                    GameObject prefab = objectiveIncompletePrefab;
-
-                    GameObject objectiveInstance = Instantiate(prefab, objectiveContainer);
-                    TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
-                    objectiveText.text = objective.description;
-                }
-            }
-            if (rewardText != null)
-            {
-                rewardText.text = GetRewardText(quest);
-            }
+            if (locationTitle == null) { return; }
+            locationTitle.text = locationName;
+            completedObjectives.text = String.Format("Completed {0} of {1} side quests", completedQuests, questNumber);
         }
     }
 }
