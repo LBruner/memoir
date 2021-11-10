@@ -2,30 +2,29 @@
 
 public enum EquipmentType
 {
-	Helmet,
-	Chest,
-	Gloves,
-	Boots,
-	Weapon1,
-	Weapon2,
-	Accessory1,
-	Accessory2,
+	Sword,
+	Shoulders,
+	Legs,
+	Trinket
 }
 
 [CreateAssetMenu(menuName = "Items/Equippable Item")]
 public class EquippableItem : Item
 {
-	public int StrengthBonus;
-	public int AgilityBonus;
-	public int IntelligenceBonus;
-	public int VitalityBonus;
+	public int HealthBonus;
+	public int EnergyBonus;
+	public int DamageBonus;
+	public int DamageReducitonBonus;
+	public int DrawBonus;
+	public int CostBonus;
+
 	[Space]
-	public float StrengthPercentBonus;
-	public float AgilityPercentBonus;
-	public float IntelligencePercentBonus;
-	public float VitalityPercentBonus;
+	public float HealthPercentBonus;
+	public float DamagePercentBonus;
+	public float DamageReductionPercentBonus;
+
 	[Space]
-	public EquipmentType EquipmentType;
+	public EquipmentType Type;
 
 	public override Item GetCopy()
 	{
@@ -40,6 +39,11 @@ public class EquippableItem : Item
 	public void Equip(Player c)
 	{
 		// TO-DO: Add bonuses
+
+		Debug.Log("Damage Bonus: " + DamageBonus);
+
+		if (DamageBonus != 0)
+			c.DamageModifier.AddModifier(new StatModifier(DamageBonus, StatModType.Flat, false, this));
 
 		//if (StrengthBonus != 0)
 		//	c.Strength.AddModifier(new StatModifier(StrengthBonus, StatModType.Flat, this));
@@ -62,7 +66,7 @@ public class EquippableItem : Item
 
 	public override string GetItemType()
 	{
-		return EquipmentType.ToString();
+		return Type.ToString();
 	}
 
 	public override string GetDescription()
@@ -80,6 +84,8 @@ public class EquippableItem : Item
 		//AddStat(IntelligencePercentBonus, "Intelligence", isPercent: true);
 		//AddStat(VitalityPercentBonus, "Vitality", isPercent: true);
 
+		AddStat(DamageBonus, "Power");
+
 		return sb.ToString();
 	}
 
@@ -91,8 +97,7 @@ public class EquippableItem : Item
 				sb.AppendLine();
 
 			if (value > 0)
-				sb.Append("+");
-
+				sb.Append(" ");
 			if (isPercent) {
 				sb.Append(value * 100);
 				sb.Append("% ");

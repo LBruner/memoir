@@ -15,12 +15,12 @@ MonoBehaviour:
   id: a8e82ee030cb9da499054278ee4713f2
   Name: Sword Strike
   Artwork: {fileID: 21300000, guid: 625683bde5e14ed46b7519bdd7406896, type: 3}
-  Cost: 1
-  Targetable: 1
   Type: 0
-  Used: 0
+  Targetable: 1
+  Cost: 1
+  Used: 5
+  Expendable: 0
   CanEvolve: 1
-  Level: 1
   Experience: 0
   Effects: []
   MinDamage: 3
