@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2832160245068918056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3910771555059085703}
+  - component: {fileID: 1273982265425829550}
+  - component: {fileID: 4960674298508421225}
+  m_Layer: 0
+  m_Name: Player Data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3910771555059085703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832160245068918056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3816164, y: 0.15648651, z: 34.2284}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1273982265425829550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832160245068918056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d177b822b7b5849b85ddfac08e6c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 1
+  CurrentEnergy: 3
+  GoldCoins: 0
+  CurrentHealth: 0
+  Defense: 0
+  HealthModifier:
+    BaseValue: 40
+    statModifiers: []
+  EnergyModifier:
+    BaseValue: 3
+    statModifiers: []
+  DamageModifier:
+    BaseValue: 0
+    statModifiers: []
+  DamageReducitonModifier:
+    BaseValue: 0
+    statModifiers: []
+  DrawModifier:
+    BaseValue: 0
+    statModifiers: []
+  CostModifier:
+    BaseValue: 0
+    statModifiers: []
+  Deck: {fileID: 0}
+  DeckSystem: {fileID: 0}
+  EquipmentPanel: {fileID: 0}
+  CardSaveManager: {fileID: 4960674298508421225}
+--- !u!114 &4960674298508421225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832160245068918056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 304fa4958b96e164f94152ec5074feaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardDatabase: {fileID: 11400000, guid: 589fe7114af69864e9517f93d269dc31, type: 2}
