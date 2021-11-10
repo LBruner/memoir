@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class CardDatabase : ScriptableObject
 {
-	[SerializeField] List<Card> cards;
+	[SerializeField] Card[] cards;
 
 	public Card GetCardReference(string cardId)
 	{
@@ -21,10 +21,10 @@ public class CardDatabase : ScriptableObject
 		return null;
 	}
 
-	public Card GetCardCopy(string itemID)
+	public Card GetCardCopy(string cardId)
 	{
-		Card item = GetCardReference(itemID);
-		return item != null ? item.GetCopy() : null;
+		Card card = GetCardReference(cardId);
+		return card != null ? card.GetCopy() : null;
 	}
 
 #if UNITY_EDITOR
@@ -46,11 +46,13 @@ public class CardDatabase : ScriptableObject
 
 	private void LoadCards()
 	{
-		Card[] attackCards = FindAssetsByType<Card>("Assets/Cards/Attacks");
-		Card[] abilityCards = FindAssetsByType<Card>("Assets/Cards/Ability");
+		//Card[] attackCards = FindAssetsByType<Card>("Assets/Cards/Attacks");
+		//Card[] abilityCards = FindAssetsByType<Card>("Assets/Cards/Ability");
 
-		cards.AddRange(abilityCards);
-		cards.AddRange(attackCards);
+		//cards.AddRange(abilityCards);
+		//cards.AddRange(attackCards);
+
+		cards = FindAssetsByType<Card>("Assets/Cards");
 	}
 
 	// Slightly modified version of this answer: http://answers.unity.com/answers/1216386/view.html
