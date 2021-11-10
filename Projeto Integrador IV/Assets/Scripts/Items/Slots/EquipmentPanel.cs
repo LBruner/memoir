@@ -13,6 +13,17 @@ public class EquipmentPanel : MonoBehaviour
 	public event Action<BaseItemSlot> OnPointerExitEvent;
 	public event Action<BaseItemSlot> OnRightClickEvent;
 
+	private void Awake()
+	{
+		if (EquipmentSlots.Count == 0)
+		{
+			foreach(Item item in Player.Instance.Items)
+			{
+				AddItem(item as EquippableItem);
+			}
+		}
+	}
+
 	private void Start()
 	{
 		for (int i = 0; i < EquipmentSlots.Count; i++)
