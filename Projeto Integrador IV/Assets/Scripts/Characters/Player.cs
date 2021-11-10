@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
 	private void Awake()
 	{
 		HealthModifier.BaseValue = 40;
-		EnergyModifier.BaseValue = 3; 
+		EnergyModifier.BaseValue = 3;
 
 		CurrentHealth = MaxHealth;
 		CurrentEnergy = MaxEnergy;
@@ -81,21 +81,25 @@ public class Player : MonoBehaviour
 
 	public void Equip(EquippableItem item)
 	{
-		if (EquipmentPanel.AddItem(item))
+		Debug.Log("Equipping: " + item.ItemName);
+		Items.Add(item);
+		item.Equip(this);
+
+		if (EquipmentPanel != null)
 		{
-			Debug.Log("Equipping: " + item.ItemName);
-			Items.Add(item);
-			item.Equip(this);
+			EquipmentPanel.AddItem(item)
 		}
 	}
 
 	public void Equip(EquippableItem item, int index)
 	{
-		if (EquipmentPanel.AddItem(item, index))
+		Debug.Log("Equipping: " + item.ItemName + " at slot " + index);
+		Items.Insert(index, item);
+		item.Equip(this);
+
+		if (EquipmentPanel != null)
 		{
-			Debug.Log("Equipping: " + item.ItemName + " at slot " + index);
-			Items.Insert(index, item);
-			item.Equip(this);
+			EquipmentPanel.AddItem(item, index);
 		}
 	}
 }
