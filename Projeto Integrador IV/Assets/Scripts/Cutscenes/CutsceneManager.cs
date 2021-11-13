@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 namespace RPG.Cutscenes
@@ -25,17 +26,27 @@ namespace RPG.Cutscenes
 
         public soundTriggers[] triggers;
 
-        private void StartCutscene()
+        public void StartCutscene()
         {
+            player.loopPointReached += EndReached;
+
             isPlaying = true;
             player.Play();
             clipIndex++;
+
+            PlaySFX();
         }
 
         private void Update()
         {
             Setup();
             CheckInput();
+        }
+
+        void EndReached(UnityEngine.Video.VideoPlayer vp)
+        {
+            vp.playbackSpeed = vp.playbackSpeed / 10.0F;
+            SceneManager.LoadScene("Map");
         }
 
         private void Setup()
@@ -54,15 +65,8 @@ namespace RPG.Cutscenes
 
         private void CheckInput()
         {
-            if (Input.GetKeyDown(KeyCode.B))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                StartCutscene();
-                PlaySFX();
-            }
-
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-
                 SkipCutscene();
                 PlaySFX();
             }

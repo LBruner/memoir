@@ -134,6 +134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   title: {fileID: 7154325830130994003}
+  locationTitle: {fileID: 0}
+  completedObjectives: {fileID: 0}
   objectiveContainer: {fileID: 9107668979949469729}
   objectivePrefab: {fileID: 7775763324119717876, guid: 90a296b26c3909347b219b0decaa52f8,
     type: 3}
@@ -204,7 +206,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3 cards and 30 gold
+  m_text: 3 cards and 30 gold3 cards and 30 gold3 cards and 30 gold3 cards and 30
+    gold3 cards and 30 gold
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -231,8 +234,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 39.2
+  m_fontSizeBase: 39.2
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

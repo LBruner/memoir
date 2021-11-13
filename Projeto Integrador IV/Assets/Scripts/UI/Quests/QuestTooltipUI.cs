@@ -15,6 +15,8 @@ namespace RPG.UI.Quests
         [SerializeField] GameObject objectiveIncompletePrefab;
         [SerializeField] TextMeshProUGUI rewardText;
 
+        bool noCardsLeft = false;
+
         public void Setup(QuestStatus status)
         {
             Quest quest = status.GetQuest();
@@ -45,16 +47,24 @@ namespace RPG.UI.Quests
             string rewardText = "";
             foreach (var reward in quest.GetRewards())
             {
-                if (rewardText != "")
+                if (reward.items != null)
                 {
-                    rewardText += ", ";
+                    foreach (var item in reward.items)
+                    {
+                        if (rewardText != "")
+                        {
+                            rewardText += ", ";
+                        }
+                        rewardText += item.ItemName;
+                    }
                 }
-                rewardText += reward.name;
             }
+
             if (rewardText == "")
             {
                 rewardText = "No reward.";
             }
+            rewardText += ", New cards";
             rewardText += ".";
             return rewardText;
         }
