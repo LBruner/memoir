@@ -24,7 +24,6 @@ namespace RPG.Dialogue
 
         bool isChoosing = false;
         bool isTalking = false;
-        bool finishedStartingDialogue = false;
 
         public event Action onConversationUpdated;
         public List<Mover> movers = new List<Mover>();

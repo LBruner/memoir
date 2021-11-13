@@ -52,9 +52,24 @@ namespace RPG.Quests
         }
         private void GiveRewards(Quest quest)
         {
-            foreach (var rewards in quest.GetRewards())
+            foreach (var reward in quest.GetRewards())
             {
-                //Método no inventário para adicionar um objeto
+                if (reward.cards != null)
+                {
+                    foreach (var card in reward.cards)
+                    {
+                        FindObjectOfType<PlayerDeck>().AddCard(card);
+                        Player.Instance.CardSaveManager.SavePlayerDeck(Player.Instance.Deck);
+                    }
+                }
+
+                if (reward.items != null)
+                {
+                    foreach (var item in reward.items)
+                    {
+                        Player.Instance.Equip(item);
+                    }
+                }
             }
         }
 

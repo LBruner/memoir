@@ -4,102 +4,102 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-	public static Player Instance;
+    public static Player Instance;
 
-	[Header("Status")]
-	public int Level;
-	public int MaxEnergy
-	{
-		get
-		{
-			return (int)EnergyModifier.Value;
-		}
-	}
-	public int CurrentEnergy;
-	public int GoldCoins;
+    [Header("Status")]
+    public int Level;
+    public int MaxEnergy
+    {
+        get
+        {
+            return (int)EnergyModifier.Value;
+        }
+    }
+    public int CurrentEnergy;
+    public int GoldCoins;
 
-	public int MaxHealth
-	{
-		get
-		{
-			return (int)HealthModifier.Value;
-		}
-	}
-	public int CurrentHealth;
+    public int MaxHealth
+    {
+        get
+        {
+            return (int)HealthModifier.Value;
+        }
+    }
+    public int CurrentHealth;
 
-	public int Defense;
+    public int Defense;
 
-	[Header("Modifiers")]
-	public CharacterStat HealthModifier;
-	public CharacterStat EnergyModifier;
-	public CharacterStat DamageModifier;
-	public CharacterStat DamageReducitonModifier;
-	public CharacterStat DrawModifier;
-	public CharacterStat CostModifier;
+    [Header("Modifiers")]
+    public CharacterStat HealthModifier;
+    public CharacterStat EnergyModifier;
+    public CharacterStat DamageModifier;
+    public CharacterStat DamageReducitonModifier;
+    public CharacterStat DrawModifier;
+    public CharacterStat CostModifier;
 
-	[Header("Deck")]
-	public PlayerDeck Deck;
-	public DeckSystem DeckSystem;
+    [Header("Deck")]
+    public PlayerDeck Deck;
+    public DeckSystem DeckSystem;
 
-	[Header("Equipment")]
-	public List<Item> Items;
-	public EquipmentPanel EquipmentPanel;
+    [Header("Equipment")]
+    public List<Item> Items;
+    public EquipmentPanel EquipmentPanel;
 
-	[Header("System")]
-	public CardSaveManager CardSaveManager;
+    [Header("System")]
+    public CardSaveManager CardSaveManager;
 
-	private void Awake()
-	{
-		HealthModifier.BaseValue = 40;
-		EnergyModifier.BaseValue = 3;
+    private void Awake()
+    {
+        HealthModifier.BaseValue = 40;
+        EnergyModifier.BaseValue = 3;
 
-		CurrentHealth = MaxHealth;
-		CurrentEnergy = MaxEnergy;
+        CurrentHealth = MaxHealth;
+        CurrentEnergy = MaxEnergy;
 
-		if (CardSaveManager != null)
-		{
-			CardSaveManager.LoadDeck(Deck);
-		}
+        if (CardSaveManager != null)
+        {
+            CardSaveManager.LoadDeck(Deck);
+        }
 
-		//if (PlayerSaveManager != null)
-		//{
+        //if (PlayerSaveManager != null)
+        //{
 
-		//}
+        //}
 
-		Instance = this;
+        Instance = this;
 
-		DontDestroyOnLoad(gameObject);
-	}
+        DontDestroyOnLoad(gameObject);
+    }
 
-	private void OnDestroy()
-	{
-		if (CardSaveManager != null)
-		{
-			CardSaveManager.SavePlayerDeck(Deck);
-		}
-	}
+    private void OnDestroy()
+    {
+        if (CardSaveManager != null)
+        {
+            CardSaveManager.SavePlayerDeck(Deck);
+        }
+    }
 
-	public void Equip(EquippableItem item)
-	{
-		Debug.Log("Equipping: " + item.ItemName);
-		Items.Add(item);
-		item.Equip(this);
+    public void Equip(EquippableItem item)
+    {
+        Debug.Log("Equipping: " + item.ItemName);
+        Items.Add(item);
+        item.Equip(this);
 
-		if (EquipmentPanel != null)
-		{
-			EquipmentPanel.AddItem(item)
-		}
-	}
+        if (EquipmentPanel != null)
+        {
+            EquipmentPanel.AddItem(item);
+        }
+    }
 
-	public void Equip(EquippableItem item, int index)
-	{
-		Debug.Log("Equipping: " + item.ItemName + " at slot " + index);
-		Items.Insert(index, item);
-		item.Equip(this);
+    public void Equip(EquippableItem item, int index)
+    {
+        Debug.Log("Equipping: " + item.ItemName + " at slot " + index);
+        Items.Insert(index, item);
+        item.Equip(this);
 
-		if (EquipmentPanel != null)
-		{
-			EquipmentPanel.AddItem(item, index);
-		}
-	}
+        if (EquipmentPanel != null)
+        {
+            EquipmentPanel.AddItem(item, index);
+        }
+    }
 }
