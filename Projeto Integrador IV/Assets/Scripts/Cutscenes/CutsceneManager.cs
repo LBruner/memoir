@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -9,6 +10,8 @@ namespace RPG.Cutscenes
     {
         [SerializeField] VideoPlayer player;
         [SerializeField] AudioSource audioSource;
+        [SerializeField] bool goesToMap = true;
+        [SerializeField] GameObject skipObject;
         [SerializeField] List<float> timestamps = new List<float>();
 
         bool isPlaying = false;
@@ -41,12 +44,23 @@ namespace RPG.Cutscenes
         {
             Setup();
             CheckInput();
+            DisplaySkipTooltip();
+        }
+
+        private void DisplaySkipTooltip()
+        {
+            if (!isPlaying && player.isPaused)
+                skipObject.GetComponent<Animator>().SetBool("isPaused", true);
         }
 
         void EndReached(UnityEngine.Video.VideoPlayer vp)
         {
             vp.playbackSpeed = vp.playbackSpeed / 10.0F;
-            SceneManager.LoadScene("Map");
+            if (goesToMap)
+                SceneManager.LoadScene("Map");
+            else
+                SceneManager.LoadScene("Menu");
+
         }
 
         private void Setup()
@@ -79,6 +93,7 @@ namespace RPG.Cutscenes
                 jumpIndex++;
                 clipIndex++;
                 isPlaying = true;
+                skipObject.GetComponent<Animator>().SetBool("isPaused", false);
                 player.Play();
             }
             else

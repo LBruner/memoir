@@ -1,0 +1,218 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9117037695476114586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 3007c9ae-142a-4e54-9bd5-7b3256383bff
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Now let''s cut this stupid conversation, this madness of yours ends here.    '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1144
+    y: 116
+    width: 200
+    height: 100
+  onEnterAction:
+  - EnableButtons
+  onExitAction:
+  - 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-8391958786476193241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 455a3dbb-b427-4a4e-a66e-6a033d75b209
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'You''re so naive... Why should I do that? I helped to start all of this.    '
+  children:
+  - 3007c9ae-142a-4e54-9bd5-7b3256383bff
+  rect:
+    serializedVersion: 2
+    x: 573
+    y: 165
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8634f0ee61c5c45a9af80261ffe5f5, type: 3}
+  m_Name: BossLevelTwo
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 7859536256284042780}
+  - {fileID: 1599891690011791129}
+  - {fileID: 7716229297775732208}
+  - {fileID: 6455526867588190835}
+  - {fileID: 2968348124427778187}
+  - {fileID: -8391958786476193241}
+  - {fileID: -9117037695476114586}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &1599891690011791129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: b54124a7-9f2b-4d18-839e-cdfe09cd241e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Well my friend says I am determined..
+  children:
+  - fb3c5358-6f54-4cda-928b-a5c231354d94
+  rect:
+    serializedVersion: 2
+    x: 297
+    y: 94
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &2968348124427778187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: fb3c5358-6f54-4cda-928b-a5c231354d94
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Even though that''s true you have no idea where you are. At least that doesn''t
+    matter anymore...     '
+  children:
+  - 3007c9ae-142a-4e54-9bd5-7b3256383bff
+  rect:
+    serializedVersion: 2
+    x: 855
+    y: 30
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &6455526867588190835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 1771f761-7142-4923-9cdc-1fec612887f5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'If I were so fragile I wouldn''t have made it this far.    '
+  children:
+  - fb3c5358-6f54-4cda-928b-a5c231354d94
+  rect:
+    serializedVersion: 2
+    x: 268
+    y: 300
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &7716229297775732208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 3751fcdd-10ef-4415-a9d6-f7f9f9597ba8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'Aren''t you able to heal the people from my village?    '
+  children:
+  - 455a3dbb-b427-4a4e-a66e-6a033d75b209
+  rect:
+    serializedVersion: 2
+    x: 286
+    y: 206
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &7859536256284042780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 3a486484-99d3-4741-bdd7-3c451ed11102
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'How did such a fragile child end up in this dangerous forest on it''s own?    '
+  children:
+  - b54124a7-9f2b-4d18-839e-cdfe09cd241e
+  - 3751fcdd-10ef-4415-a9d6-f7f9f9597ba8
+  - 1771f761-7142-4923-9cdc-1fec612887f5
+  rect:
+    serializedVersion: 2
+    x: 25
+    y: 163
+    width: 200
+    height: 100
+  onEnterAction:
+  - SwitchMusicStart
+  - PlayMusic
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []

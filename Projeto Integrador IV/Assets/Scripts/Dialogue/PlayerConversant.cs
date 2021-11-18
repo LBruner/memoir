@@ -15,7 +15,6 @@ namespace RPG.Dialogue
     {
         [SerializeField] string playerName;
         [SerializeField] Color playerColor;
-        [SerializeField] Sprite playerImage;
         [SerializeField] Dialogue startingDialogue;
         Dialogue currentDialogue;
 
@@ -27,15 +26,6 @@ namespace RPG.Dialogue
 
         public event Action onConversationUpdated;
         public List<Mover> movers = new List<Mover>();
-
-        private void Awake()
-        {
-            // foreach (var quest in startingQuests)
-            // {
-            //     FindObjectOfType<QuestGiver>().GiveDefaultQuest(quest);
-            // }
-            // FindObjectOfType<QuestCompletion>().CompleteDefaultObjective(test);
-        }
 
         private void OnDisable()
         {
@@ -125,16 +115,6 @@ namespace RPG.Dialogue
             return currentNode.GetText();
         }
 
-        public Sprite GetPlayerImage()
-        {
-            return playerImage;
-        }
-
-        public Sprite GetEnemyImage()
-        {
-            return currentConversant.GetImage();
-        }
-
         public string GetCurrentConversantName()
         {
             if (isChoosing)
@@ -218,7 +198,10 @@ namespace RPG.Dialogue
         {
             if (currentNode != null)
             {
-                TriggerAction(currentNode.GetOnEnterAction());
+                foreach (var trigger in currentNode.GetOnEnterAction())
+                {
+                    TriggerAction(trigger);
+                }
             }
         }
 
@@ -226,7 +209,10 @@ namespace RPG.Dialogue
         {
             if (currentNode != null)
             {
-                TriggerAction(currentNode.GetOnExitAction());
+                foreach (var trigger in currentNode.GetOnExitAction())
+                {
+                    TriggerAction(trigger);
+                }
             }
         }
 

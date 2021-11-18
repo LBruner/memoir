@@ -12,16 +12,25 @@ namespace RPG.Dialogue
         [SerializeField]
         bool isPlayerSpeaking = false;
         [SerializeField]
+        [TextArea(8, 25)]
         string text;
 
+        [HideInInspector]
         public List<string> children = new List<string>();
         [SerializeField]
+        [HideInInspector]
         Rect rect = new Rect(0, 0, 200, 100);
         [SerializeField]
-        string onEnterAction;
+        [Header("OnEnter")]
+        [Space]
+        string[] onEnterAction;
         [SerializeField]
-        string onExitAction;
+        [Header("OnExit")]
+        [Space]
+        string[] onExitAction;
         [SerializeField]
+        [Space]
+        [Header("Condition")]
         Condition condition;
 
         public Rect GetRect()
@@ -44,11 +53,11 @@ namespace RPG.Dialogue
             return isPlayerSpeaking;
         }
 
-        public string GetOnEnterAction()
+        public string[] GetOnEnterAction()
         {
             return onEnterAction;
         }
-        public string GetOnExitAction()
+        public string[] GetOnExitAction()
         {
             return onExitAction;
         }

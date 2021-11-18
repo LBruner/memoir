@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using RPG.Dialogue;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace RPG.UI
@@ -27,6 +28,21 @@ namespace RPG.UI
 
         bool enableTypingEffect = false;
         int currentLetterIndex = 0;
+
+        private static DialogueUI _instance;
+
+        public static DialogueUI Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = GameObject.FindObjectOfType<DialogueUI>();
+                }
+
+                return _instance;
+            }
+        }
 
         private void Start()
         {
@@ -63,15 +79,6 @@ namespace RPG.UI
             }
             conversantName.text = playerConversant.GetCurrentConversantName();
             conversantName.color = playerConversant.GetCurrentConversantColor();
-
-            if (playerConversant.GetEnemyImage() != null)
-            {
-                playerImage.gameObject.SetActive(true);
-                enemyImage.gameObject.SetActive(true);
-                playerImage.sprite = playerConversant.GetPlayerImage();
-                enemyImage.sprite = playerConversant.GetEnemyImage();
-            }
-
 
             AIResponse.SetActive(!playerConversant.IsChoosing());
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
@@ -110,7 +117,7 @@ namespace RPG.UI
             {
                 currentLetterIndex++;
 
-                if (currentLetterIndex == fullText.Length / 4)
+                if (currentLetterIndex == Mathf.Round(fullText.Length / 4))
                     enableTypingEffect = true;
 
                 if (enableTypingEffect)
@@ -152,6 +159,9 @@ namespace RPG.UI
 
         private void SpawnDialoguePopups(string textToDisplay)
         {
+            if (SceneManager.GetActiveScene().buildIndex != 1)
+                return;
+
             Vector3 spawnPos = new Vector2(transform.position.x, transform.position.y + GetComponent<RectTransform>().rect.height / 2);
             GameObject popup = Instantiate(popupDialogue, popupParent.transform);
 
