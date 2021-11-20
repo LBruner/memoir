@@ -12,9 +12,9 @@ public class AbilityCard : Card
 		Targetable = false;
 	}
 
-	public override void ExecuteEffect(Player player)
+	public override void ExecuteEffect(Card card, Player player)
 	{
-		Used++;
+		card.Used++;
 
 		foreach (CardEffect effect in Effects)
 		{
@@ -23,9 +23,9 @@ public class AbilityCard : Card
 	}
 
 
-	public override void ExecuteEffect(Player player, Enemy enemy)
+	public override void ExecuteEffect(Card card, Player player, Enemy enemy)
 	{
-		Used++;
+		card.Used++;
 
 		foreach (CardEffect effect in Effects)
 		{

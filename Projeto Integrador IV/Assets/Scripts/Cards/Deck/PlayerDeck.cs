@@ -4,16 +4,22 @@ using UnityEngine;
 public class PlayerDeck : MonoBehaviour
 {
 
+	public static PlayerDeck Instance;
+
 	public Deck startingDeck;
 
 	public List<Card> Cards;
 
-	private void Start()
+	private void Awake()
 	{
 		if (Cards.Count == 0)
 		{
 			SetStartingDeck();
 		}
+
+		Instance = this;
+
+		DontDestroyOnLoad(gameObject);
 	}
 
 	public void SetStartingDeck()

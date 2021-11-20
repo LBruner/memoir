@@ -13,7 +13,7 @@ public abstract class CardEffect : ScriptableObject
 
     public abstract string GetEffectDescription();
 
-    public abstract void RemoveEffect(Card card, Player player);
+    public abstract void RemoveEffect(Player player);
 
-    public abstract void RemoveEffect(Card card, Enemy enemy);
+    public abstract void RemoveEffect(Enemy enemy);
 }

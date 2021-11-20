@@ -37,6 +37,8 @@ public class Player : MonoBehaviour
 	public CharacterStat DrawModifier;
 	public CharacterStat CostModifier;
 
+	public List<StatModifier> temporaryModifiers;
+
 	[Header("Deck")]
 	public PlayerDeck Deck;
 	public DeckSystem DeckSystem;
@@ -47,9 +49,16 @@ public class Player : MonoBehaviour
 
 	[Header("System")]
 	public CardSaveManager CardSaveManager;
+	public ItemSaveManager ItemSaveManager;
+
+	public bool CanSave;
 
 	private void Awake()
 	{
+		CanSave = true;
+
+		Deck = PlayerDeck.Instance;
+
 		HealthModifier.BaseValue = 40;
 		EnergyModifier.BaseValue = 3;
 
@@ -59,6 +68,11 @@ public class Player : MonoBehaviour
 		if (CardSaveManager != null)
 		{
 			CardSaveManager.LoadDeck(Deck);
+		}
+
+		if (ItemSaveManager != null)
+		{
+			ItemSaveManager.LoadInventory();
 		}
 
 		//if (PlayerSaveManager != null)
@@ -73,9 +87,17 @@ public class Player : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		if (CardSaveManager != null)
+		if (CanSave)
 		{
-			CardSaveManager.SavePlayerDeck(Deck);
+			if (CardSaveManager != null)
+			{
+				CardSaveManager.SavePlayerDeck(Deck);
+			}
+
+			if (ItemSaveManager != null)
+			{
+				ItemSaveManager.SaveInventory();
+			}
 		}
 	}
 
@@ -87,7 +109,7 @@ public class Player : MonoBehaviour
 
 		if (EquipmentPanel != null)
 		{
-			EquipmentPanel.AddItem(item)
+			EquipmentPanel.AddItem(item);
 		}
 	}
 

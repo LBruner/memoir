@@ -10,35 +10,15 @@ public class InventoryInput : MonoBehaviour
 
 	void Start()
 	{
-		//ToggleCharacterPanel();
-		//ToggleEquipmentPanel();
-		//ToggleInventory();
+		equipmentPanelGameObject.SetActive(false);
 	}
 
-	//private void ToggleCharacterPanel()
-	//{
-	//	for (int i = 0; i < toggleCharacterPanelKeys.Length; i++)
-	//	{
-	//		if (Input.GetKeyDown(toggleCharacterPanelKeys[i]))
-	//		{
-	//			characterPanelGameObject.SetActive(!characterPanelGameObject.activeSelf);
+	private void Update()
+	{
+		CheckKeyPress();
+	}
 
-	//			if (characterPanelGameObject.activeSelf)
-	//			{
-	//				equipmentPanelGameObject.SetActive(true);
-	//				ShowMouseCursor();
-	//			}
-	//			else
-	//			{
-	//				HideMouseCursor();
-	//			}
-
-	//			break;
-	//		}
-	//	}
-	//}
-
-	private void ToggleInventory()
+	private void CheckKeyPress()
 	{
 		for (int i = 0; i < toggleInventoryKeys.Length; i++)
 		{

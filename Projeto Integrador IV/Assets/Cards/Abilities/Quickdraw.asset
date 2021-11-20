@@ -18,9 +18,12 @@ MonoBehaviour:
   Type: 1
   Targetable: 0
   Cost: 1
-  Used: 5
+  Used: 0
   Expendable: 0
   CanEvolve: 1
   Experience: 0
+  ReqExperience: 5
+  IsEvolution: 0
   Effects:
   - {fileID: 11400000, guid: af4e01cc1ef29e04c94523f0c1ab7f20, type: 2}
+  Evolutions: []

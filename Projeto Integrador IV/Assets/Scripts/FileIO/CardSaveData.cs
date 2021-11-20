@@ -8,13 +8,15 @@ public class CardSaveData
 	public int DeckIndex;
 
 	public bool CanEvolve;
+	public int Uses;
 	public int Experience;
 
-	public CardSaveData(string id, int index, bool canEvolve, int experience)
+	public CardSaveData(string id, int index, bool canEvolve, int uses, int experience)
 	{
 		CardId = id;
 		DeckIndex = index;
 		CanEvolve = canEvolve;
+		Uses = uses;
 		Experience = experience;
 	}
 }

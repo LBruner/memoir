@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelThree.unity
     guid: 3f492ac97dca3664ca9aed7e5818daa8
+  - enabled: 1
+    path: Assets/Scenes/BatteScene.unity
+    guid: d315ccf1b4fcb2242ad79fe45502acdd
+  - enabled: 1
+    path: Assets/Scenes/RewardScene.unity
+    guid: 35efeaf61a75bb84f9691b8ac187d460
   m_configObjects: {}

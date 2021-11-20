@@ -15,13 +15,15 @@ MonoBehaviour:
   id: 6c1d1b5e0a9e62b4a8d935f42ce48745
   Name: Charged Strike
   Artwork: {fileID: 21300000, guid: 28f37e810c5f4b8448485cc7890e9630, type: 3}
-  Cost: 3
-  Targetable: 1
   Type: 0
+  Targetable: 1
+  Cost: 3
   Used: 0
+  Expendable: 0
   CanEvolve: 1
-  Level: 1
   Experience: 0
+  ReqExperience: 8
   Effects: []
+  Evolutions: []
   MinDamage: 5
   MaxDamage: 10

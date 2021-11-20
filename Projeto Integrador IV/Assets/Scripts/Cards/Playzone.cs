@@ -6,7 +6,9 @@ public class Playzone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 	[SerializeField] DropType dropType = DropType.All;
 	[SerializeField] Enemy enemy;
 	[SerializeField] Player player;
+
 	[SerializeField] TurnSystem turnSystem;
+	[SerializeField] BuffSystem buffSystem;
 
 	Draggable carDropped = null;
 
@@ -24,7 +26,7 @@ public class Playzone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 	{
 		Draggable d = eventData.pointerDrag.GetComponent<Draggable>();
 
-		if (d != null && (dropType == DropType.All || d.dropType == dropType || d.dropType == DropType.All))
+		if (turnSystem.GetTurn() == Turn.Player && d != null && (dropType == DropType.All || d.dropType == dropType || d.dropType == DropType.All))
 		{
 			carDropped = d;
 			Card card = carDropped.gameObject.GetComponent<CardDisplay>().card;
@@ -57,12 +59,17 @@ public class Playzone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 			if (card.Targetable)
 			{
 				Debug.Log("Enemy: " + enemy.Level);
-				card.ExecuteEffect(player, enemy);
+
+				if (((AttackCard) card).PlayTwice)
+					card.ExecuteEffect(card, player, enemy);
+
+				card.ExecuteEffect(card, player, enemy);
+
 				Destroy(carDropped.gameObject);
 				return;
 			}
 
-			card.ExecuteEffect(player);
+			card.ExecuteEffect(card, player);
 			Destroy(carDropped.gameObject);
 			return;
 		}

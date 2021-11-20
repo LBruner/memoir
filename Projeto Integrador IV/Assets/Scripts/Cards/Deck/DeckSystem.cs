@@ -22,6 +22,13 @@ public class DeckSystem : MonoBehaviour
 
 	public GameObject CardPrefab;
 	public GameObject PlaceholderCardPrefab;
+
+	private void Start()
+	{
+		player = Player.Instance;
+		playerDeck = Player.Instance.Deck;
+	}
+
 	public void InitPlayerDeck()
 	{
 		Deck.AddRange(playerDeck.Cards);
