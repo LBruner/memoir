@@ -28,8 +28,11 @@ public class TurnSystem : MonoBehaviour
 	[SerializeField] ProgressBar enemyHealth;
 	[SerializeField] ProgressBar enemyDefense;
 
+	[SerializeField] int enemyDamage;
 	void Start()
 	{
+		player = Player.Instance;
+
 		playerDeck.ClearCardFlags();
 		playerDeck.InitPlayerDeck();
 		playerDeck.Shuffle();
@@ -79,6 +82,21 @@ public class TurnSystem : MonoBehaviour
 		energyText.text = player.CurrentEnergy + "/" + player.MaxEnergy;
 
 		// Passar pelos modificadores e reduzir duraçãos dos temporários
+		Player.Instance.temporaryModifiers.ForEach((modifier) =>
+		{
+			if (modifier.BattleOnly && ((CardEffect)modifier.Source).Temp)
+			{
+				((CardEffect)modifier.Source).Duration--;
+
+				//modifier.Source = effect;
+
+				if (((CardEffect)modifier.Source).Duration == 0)
+				{
+					((CardEffect)modifier.Source).RemoveEffect(Player.Instance);
+					Player.Instance.temporaryModifiers.Remove(modifier);
+				}
+			}
+		});
 
 		playerDeck.DrawCards(5);
 
@@ -112,7 +130,7 @@ public class TurnSystem : MonoBehaviour
 		//enemy.CurrentEnergy = enemy.MaxEnergy;
 		// Passar pelos modificadores e reduzir duraçãos dos temporários
 
-		int damage = 5;
+		int damage = enemyDamage;
 		int defenseAux = player.Defense;
 
 		if (damage > player.Defense)
@@ -150,5 +168,15 @@ public class TurnSystem : MonoBehaviour
 	public void UpdateEnergyDisplay()
 	{
 		energyText.text = player.CurrentEnergy + "/" + player.MaxEnergy;
+	}
+
+	public void endBattle()
+	{
+		Destroy(energyText.gameObject);
+		Destroy(turnButton.gameObject);
+		Destroy(nextTurnText.gameObject);
+		Destroy(turnText.gameObject);
+
+		playerDeck.ClearHand();
 	}
 }

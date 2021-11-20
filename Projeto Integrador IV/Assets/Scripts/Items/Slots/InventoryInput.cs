@@ -2,82 +2,54 @@
 
 public class InventoryInput : MonoBehaviour
 {
-    //[SerializeField] GameObject characterPanelGameObject;
-    [SerializeField] GameObject equipmentPanelGameObject;
-    //[SerializeField] KeyCode[] toggleCharacterPanelKeys;
-    [SerializeField] KeyCode[] toggleInventoryKeys;
-    [SerializeField] bool showAndHideMouse = true;
+	//[SerializeField] GameObject characterPanelGameObject;
+	[SerializeField] GameObject equipmentPanelGameObject;
+	//[SerializeField] KeyCode[] toggleCharacterPanelKeys;
+	[SerializeField] KeyCode[] toggleInventoryKeys;
+	[SerializeField] bool showAndHideMouse = true;
 
-    void Start()
-    {
-        //ToggleCharacterPanel();
-        //ToggleEquipmentPanel();
-        //ToggleInventory();
-    }
+	void Start()
+	{
+		equipmentPanelGameObject.SetActive(false);
+	}
 
-    //private void ToggleCharacterPanel()
-    //{
-    //	for (int i = 0; i < toggleCharacterPanelKeys.Length; i++)
-    //	{
-    //		if (Input.GetKeyDown(toggleCharacterPanelKeys[i]))
-    //		{
-    //			characterPanelGameObject.SetActive(!characterPanelGameObject.activeSelf);
+	private void Update()
+	{
+		CheckKeyPress();
+	}
 
-    //			if (characterPanelGameObject.activeSelf)
-    //			{
-    //				equipmentPanelGameObject.SetActive(true);
-    //				ShowMouseCursor();
-    //			}
-    //			else
-    //			{
-    //				HideMouseCursor();
-    //			}
+	private void CheckKeyPress()
+	{
+		for (int i = 0; i < toggleInventoryKeys.Length; i++)
+		{
+			if (Input.GetKeyDown(toggleInventoryKeys[i]))
+			{
+				ToggleEquipmentPanel();
+				break;
+			}
+		}
+	}
 
-    //			break;
-    //		}
-    //	}
-    //}
+	public void ShowMouseCursor()
+	{
+		if (showAndHideMouse)
+		{
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+		}
+	}
 
-    private void ToggleInventory()
-    {
-        for (int i = 0; i < toggleInventoryKeys.Length; i++)
-        {
-            if (Input.GetKeyDown(toggleInventoryKeys[i]))
-            {
-                ToggleEquipmentPanel();
-                break;
-            }
-        }
-    }
+	public void HideMouseCursor()
+	{
+		if (showAndHideMouse)
+		{
+			Cursor.visible = false;
+			Cursor.lockState = CursorLockMode.Locked;
+		}
+	}
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            ToggleEquipmentPanel();
-        }
-    }
-
-    public void ShowMouseCursor()
-    {
-        if (showAndHideMouse)
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-    }
-
-    public void HideMouseCursor()
-    {
-        if (showAndHideMouse)
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-    }
-
-    public void ToggleEquipmentPanel()
-    {
-        equipmentPanelGameObject.SetActive(!equipmentPanelGameObject.activeSelf);
-    }
+	public void ToggleEquipmentPanel()
+	{
+		equipmentPanelGameObject.SetActive(!equipmentPanelGameObject.activeSelf);
+	}
 }

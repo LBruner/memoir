@@ -31,8 +31,12 @@ public class Card : ScriptableObject
 
 	public bool CanEvolve;
 	public int Experience;
+	public int ReqExperience;
+	public bool IsEvolution;
 
 	public List<CardEffect> Effects;
+
+	public List<Card> Evolutions;
 
 	protected static readonly StringBuilder sb = new StringBuilder();
 
@@ -60,12 +64,12 @@ public class Card : ScriptableObject
 
 
 	}
-	public virtual void ExecuteEffect(Player player, Enemy enemy)
+	public virtual void ExecuteEffect(Card card, Player player, Enemy enemy)
 	{
 
 	}
 
-	public virtual void ExecuteEffect(Player player)
+	public virtual void ExecuteEffect(Card card, Player player)
 	{
 
 	}

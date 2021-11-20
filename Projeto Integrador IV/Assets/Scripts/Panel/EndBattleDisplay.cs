@@ -9,6 +9,7 @@ public class EndBattleDisplay : MonoBehaviour
 
 	private void Awake()
 	{
+
 		gameObject.SetActive(false);
 	}
 
@@ -25,6 +26,6 @@ public class EndBattleDisplay : MonoBehaviour
 		LeanTween.alpha(continueButton.gameObject, 0f, 0f);
 		LeanTween.alpha(continueButton.gameObject, 1f, 1f);
 
-		stateText.text = battleState == BattleState.DEFEAT ? "Defeat" : "Victory";
+		stateText.text = (battleState == BattleState.DEFEAT) ? "Defeat" : "Victory";
 	}
 }

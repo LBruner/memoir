@@ -15,12 +15,14 @@ MonoBehaviour:
   id: 250252d853de153438382acd6230aa3f
   Name: Block
   Artwork: {fileID: 21300000, guid: 02ca583e1aa4c44459901c3002dcc10e, type: 3}
-  Cost: 1
-  Targetable: 0
   Type: 1
+  Targetable: 0
+  Cost: 1
   Used: 0
+  Expendable: 0
   CanEvolve: 1
-  Level: 1
   Experience: 0
+  ReqExperience: 5
   Effects:
   - {fileID: 11400000, guid: c87836c3519396a4c83f33cd78a957e2, type: 2}
+  Evolutions: []

@@ -4,102 +4,124 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static Player Instance;
+	public static Player Instance;
 
-    [Header("Status")]
-    public int Level;
-    public int MaxEnergy
-    {
-        get
-        {
-            return (int)EnergyModifier.Value;
-        }
-    }
-    public int CurrentEnergy;
-    public int GoldCoins;
+	[Header("Status")]
+	public int Level;
+	public int MaxEnergy
+	{
+		get
+		{
+			return (int)EnergyModifier.Value;
+		}
+	}
+	public int CurrentEnergy;
+	public int GoldCoins;
 
-    public int MaxHealth
-    {
-        get
-        {
-            return (int)HealthModifier.Value;
-        }
-    }
-    public int CurrentHealth;
+	public int MaxHealth
+	{
+		get
+		{
+			return (int)HealthModifier.Value;
+		}
+	}
+	public int CurrentHealth;
 
-    public int Defense;
+	public int Defense;
 
-    [Header("Modifiers")]
-    public CharacterStat HealthModifier;
-    public CharacterStat EnergyModifier;
-    public CharacterStat DamageModifier;
-    public CharacterStat DamageReducitonModifier;
-    public CharacterStat DrawModifier;
-    public CharacterStat CostModifier;
+	[Header("Modifiers")]
+	public CharacterStat HealthModifier;
+	public CharacterStat EnergyModifier;
+	public CharacterStat DamageModifier;
+	public CharacterStat DamageReducitonModifier;
+	public CharacterStat DrawModifier;
+	public CharacterStat CostModifier;
 
-    [Header("Deck")]
-    public PlayerDeck Deck;
-    public DeckSystem DeckSystem;
+	public List<StatModifier> temporaryModifiers;
 
-    [Header("Equipment")]
-    public List<Item> Items;
-    public EquipmentPanel EquipmentPanel;
+	[Header("Deck")]
+	public PlayerDeck Deck;
+	public DeckSystem DeckSystem;
 
-    [Header("System")]
-    public CardSaveManager CardSaveManager;
+	[Header("Equipment")]
+	public List<Item> Items;
+	public EquipmentPanel EquipmentPanel;
 
-    private void Awake()
-    {
-        HealthModifier.BaseValue = 40;
-        EnergyModifier.BaseValue = 3;
+	[Header("System")]
+	public CardSaveManager CardSaveManager;
+	public ItemSaveManager ItemSaveManager;
 
-        CurrentHealth = MaxHealth;
-        CurrentEnergy = MaxEnergy;
+	public bool CanSave;
 
-        if (CardSaveManager != null)
-        {
-            CardSaveManager.LoadDeck(Deck);
-        }
+	private void Awake()
+	{
+		CanSave = true;
 
-        //if (PlayerSaveManager != null)
-        //{
+		Deck = PlayerDeck.Instance;
 
-        //}
+		HealthModifier.BaseValue = 40;
+		EnergyModifier.BaseValue = 3;
 
-        Instance = this;
+		CurrentHealth = MaxHealth;
+		CurrentEnergy = MaxEnergy;
 
-        DontDestroyOnLoad(gameObject);
-    }
+		if (CardSaveManager != null)
+		{
+			CardSaveManager.LoadDeck(Deck);
+		}
 
-    private void OnDestroy()
-    {
-        if (CardSaveManager != null)
-        {
-            CardSaveManager.SavePlayerDeck(Deck);
-        }
-    }
+		if (ItemSaveManager != null)
+		{
+			ItemSaveManager.LoadInventory();
+		}
 
-    public void Equip(EquippableItem item)
-    {
-        Debug.Log("Equipping: " + item.ItemName);
-        Items.Add(item);
-        item.Equip(this);
+		//if (PlayerSaveManager != null)
+		//{
 
-        if (EquipmentPanel != null)
-        {
-            EquipmentPanel.AddItem(item);
-        }
-    }
+		//}
 
-    public void Equip(EquippableItem item, int index)
-    {
-        Debug.Log("Equipping: " + item.ItemName + " at slot " + index);
-        Items.Insert(index, item);
-        item.Equip(this);
+		Instance = this;
 
-        if (EquipmentPanel != null)
-        {
-            EquipmentPanel.AddItem(item, index);
-        }
-    }
+		DontDestroyOnLoad(gameObject);
+	}
+
+	private void OnDestroy()
+	{
+		if (CanSave)
+		{
+			if (CardSaveManager != null)
+			{
+				CardSaveManager.SavePlayerDeck(Deck);
+			}
+
+			if (ItemSaveManager != null)
+			{
+				ItemSaveManager.SaveInventory();
+			}
+		}
+	}
+
+	public void Equip(EquippableItem item)
+	{
+		Debug.Log("Equipping: " + item.ItemName);
+		Items.Add(item);
+		item.Equip(this);
+
+		if (EquipmentPanel != null)
+		{
+			EquipmentPanel.AddItem(item);
+		}
+	}
+
+	public void Equip(EquippableItem item, int index)
+	{
+		Debug.Log("Equipping: " + item.ItemName + " at slot " + index);
+		Items.Insert(index, item);
+		item.Equip(this);
+
+		if (EquipmentPanel != null)
+		{
+			EquipmentPanel.AddItem(item, index);
+		}
+	}
 }

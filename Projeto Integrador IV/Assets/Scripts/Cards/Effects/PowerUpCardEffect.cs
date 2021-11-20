@@ -9,7 +9,8 @@ public class PowerUpCardEffect : CardEffect
 
 	public override void ExecuteEffect(Card card, Player player)
 	{
-		StatModifier statModifier = new StatModifier(powerAmmount, StatModType.Flat, true, card);
+		StatModifier statModifier = new StatModifier(powerAmmount, StatModType.Flat, true, this);
+		player.temporaryModifiers.Add(statModifier);
 		player.DamageModifier.AddModifier(statModifier);
 	}
 
@@ -20,15 +21,20 @@ public class PowerUpCardEffect : CardEffect
 
 	public override string GetEffectDescription()
 	{
+		if (Temp && Duration > 0)
+		{
+			return "Power " + powerAmmount + " for " + Duration + " turns";
+		}
+
 		return "Power " + powerAmmount;
 	}
 
-	public override void RemoveEffect(Card card, Player player)
+	public override void RemoveEffect(Player player)
 	{
-		player.DamageModifier.RemoveAllModifiersFromSource(card);
+		player.DamageModifier.RemoveAllModifiersFromSource(this);
 	}
 
-	public override void RemoveEffect(Card card, Enemy enemy)
+	public override void RemoveEffect(Enemy enemy)
 	{
 		throw new System.NotImplementedException();
 		//enemy.DamageModifier.RemoveAllModifiersFromSource(card);

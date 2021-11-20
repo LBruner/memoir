@@ -27,6 +27,7 @@ public class CardSaveManager : MonoBehaviour
 				Card card = cardDatabase.GetCardCopy(savedCard.CardId);
 				card.CanEvolve = savedCard.CanEvolve;
 				card.Experience = savedCard.Experience;
+				card.Used = savedCard.Uses;
 
 				playerDeck.Cards.Insert(savedCard.DeckIndex, card);
 			}
@@ -44,11 +45,12 @@ public class CardSaveManager : MonoBehaviour
 
 		for(int i = 0; i < saveData.SavedCards.Length; i++)
 		{
-			Debug.Log("[Saving - Card(" + i + ")] - Card: " + cards[i].Name + " " + cards[i].Experience);
+			Debug.Log("[Saving - Card(" + i + ")] - Card: " + cards[i].Name + " " + cards[i].Used);
 			Card card = cards[i];
-			saveData.SavedCards[i] = new CardSaveData(card.ID, i, card.CanEvolve, card.Experience);
+			saveData.SavedCards[i] = new CardSaveData(card.ID, i, card.CanEvolve, card.Experience, card.Used);
 		}
 
 		CardSaveIO.SaveDeck(saveData, fileName);
 	}
 }
+

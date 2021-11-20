@@ -18,10 +18,19 @@ MonoBehaviour:
   Type: 0
   Targetable: 1
   Cost: 1
-  Used: 5
+  Used: 4
   Expendable: 0
   CanEvolve: 1
   Experience: 0
+  ReqExperience: 5
+  IsEvolution: 0
   Effects: []
+  Evolutions:
+  - {fileID: 11400000, guid: 46f58ca3e054f0940abfe321ab4b24e9, type: 2}
+  - {fileID: 11400000, guid: f739dc5840d8c8c45b2e006b33a6ad4c, type: 2}
+  - {fileID: 11400000, guid: f8a4033bf44272445b956dba25ca98ab, type: 2}
+  - {fileID: 11400000, guid: 98480905c26c40d4b8a1eff25e40c482, type: 2}
   MinDamage: 3
   MaxDamage: 5
+  PlayTwice: 0
+  CriticalDamagable: 0
