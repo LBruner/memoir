@@ -31,6 +31,8 @@ public class TurnSystem : MonoBehaviour
 	[SerializeField] int enemyDamage;
 	void Start()
 	{
+		player = Player.Instance;
+
 		playerDeck.ClearCardFlags();
 		playerDeck.InitPlayerDeck();
 		playerDeck.Shuffle();

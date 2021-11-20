@@ -58,7 +58,7 @@ namespace RPG.Quests
                 {
                     foreach (var card in reward.cards)
                     {
-                        FindObjectOfType<PlayerDeck>().AddCard(card);
+                        Player.Instance.Deck.Cards.Add(card);
                         Player.Instance.CardSaveManager.SavePlayerDeck(Player.Instance.Deck);
                     }
                 }

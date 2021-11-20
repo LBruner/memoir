@@ -12,6 +12,11 @@ public class Playzone : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
 
 	Draggable carDropped = null;
 
+	private void Start()
+	{
+		player = Player.Instance;
+	}
+
 	public void OnPointerEnter(PointerEventData eventData)
 	{
 
