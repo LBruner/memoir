@@ -22,12 +22,12 @@ public class DefenseCardEffect : CardEffect
 		return "Defends for " + DefenseAmount;
 	}
 
-	public override void RemoveEffect(Card card, Player player)
+	public override void RemoveEffect(Player player)
 	{
 		throw new System.NotImplementedException();
 	}
 
-	public override void RemoveEffect(Card card, Enemy enemy)
+	public override void RemoveEffect(Enemy enemy)
 	{
 		throw new System.NotImplementedException();
 	}

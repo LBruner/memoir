@@ -14,7 +14,7 @@ public class EquippableItem : Item
 	public int HealthBonus;
 	public int EnergyBonus;
 	public int DamageBonus;
-	public int DamageReducitonBonus;
+	public int DamageReductionBonus;
 	public int DrawBonus;
 	public int CostBonus;
 
@@ -40,10 +40,23 @@ public class EquippableItem : Item
 	{
 		// TO-DO: Add bonuses
 
-		Debug.Log("Damage Bonus: " + DamageBonus);
+		if (HealthBonus != 0)
+			c.HealthModifier.AddModifier(new StatModifier(HealthBonus, StatModType.Flat, false, this));
+
+		if (EnergyBonus != 0)
+			c.EnergyModifier.AddModifier(new StatModifier(EnergyBonus, StatModType.Flat, false, this));
 
 		if (DamageBonus != 0)
 			c.DamageModifier.AddModifier(new StatModifier(DamageBonus, StatModType.Flat, false, this));
+
+		if (DamageReductionBonus != 0)
+			c.DamageModifier.AddModifier(new StatModifier(DamageReductionBonus, StatModType.Flat, false, this));
+
+		if (DrawBonus != 0)
+			c.DrawModifier.AddModifier(new StatModifier(DrawBonus, StatModType.Flat, false, this));
+
+		if (CostBonus != 0)
+			c.CostModifier.AddModifier(new StatModifier(CostBonus, StatModType.Flat, false, this));
 
 		//if (StrengthBonus != 0)
 		//	c.Strength.AddModifier(new StatModifier(StrengthBonus, StatModType.Flat, this));

@@ -8,15 +8,18 @@ public class AttackCard : Card
 	public int MinDamage;
 	public int MaxDamage;
 
+	public bool PlayTwice;
+	public bool CriticalDamagable;
+
 	public AttackCard()
 	{
 		Type = CardType.Attack;
 		Targetable = true;
 	}
 
-	public override void ExecuteEffect(Player player, Enemy enemy)
+	public override void ExecuteEffect(Card card, Player player, Enemy enemy)
 	{
-		Used++;
+		card.Used++;
 
 		foreach (CardEffect effect in Effects)
 		{
@@ -57,5 +60,25 @@ public class AttackCard : Card
 	public override string GetCardType()
 	{
 		return "Attack";
+	}
+
+	public virtual string GetCardDescription()
+	{
+		sb.Length = 0;
+		foreach (CardEffect effect in Effects)
+		{
+			sb.AppendLine(effect.GetEffectDescription());
+		}
+
+		if (PlayTwice)
+			sb.AppendLine("Play twice");
+
+		if (CriticalDamagable)
+			sb.AppendLine("Double damage if hit for " + MaxDamage);
+
+		if (Expendable)
+			sb.AppendLine("Expend");
+
+		return sb.ToString();
 	}
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3910771555059085703}
   - component: {fileID: 1273982265425829550}
   - component: {fileID: 4960674298508421225}
+  - component: {fileID: 336491558}
   m_Layer: 0
   m_Name: Player Data
   m_TagString: Untagged
@@ -67,10 +68,14 @@ MonoBehaviour:
   CostModifier:
     BaseValue: 0
     statModifiers: []
+  temporaryModifiers: []
   Deck: {fileID: 0}
   DeckSystem: {fileID: 0}
+  Items: []
   EquipmentPanel: {fileID: 0}
   CardSaveManager: {fileID: 4960674298508421225}
+  ItemSaveManager: {fileID: 336491558}
+  CanSave: 0
 --- !u!114 &4960674298508421225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,3 +89,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardDatabase: {fileID: 11400000, guid: 589fe7114af69864e9517f93d269dc31, type: 2}
+--- !u!114 &336491558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832160245068918056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb023fe18cb1f74a837b81ae4937d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDatabase: {fileID: 11400000, guid: cb844bad92ba50f49ac9b7dc062e388d, type: 2}
