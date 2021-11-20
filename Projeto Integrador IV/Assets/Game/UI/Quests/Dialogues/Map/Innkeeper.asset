@@ -1,0 +1,454 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8882800516885396134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: fb0113f0-3028-4856-b765-dda9558be503
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'I wasn''t expecting you to go this far but now I know you can do this. But
+    listen, don''t listen to anything SHE might tell you.    '
+  children:
+  - deefafab-8bbf-4ab3-bc07-7b5ff1da5159
+  rect:
+    serializedVersion: 2
+    x: 1284
+    y: 257
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-6130161033374477052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 3294e20b-18d8-4400-b79b-04e769c24550
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Greetings my fellow traveller.    '
+  children:
+  - eecd81ba-293f-4aa2-9115-be5938495d71
+  - 784b7ac9-b7c0-44d2-ac76-63f2b7fab777
+  rect:
+    serializedVersion: 2
+    x: 31
+    y: 113
+    width: 200
+    height: 100
+  onEnterAction:
+  - SwitchMusicStart
+  - PlayMusic
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-6111792692622578825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 7cff022a-a13b-4717-997a-de046f99a632
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Hmm... Yes. The people that were taken are not themself anymore. I''m sorry
+    but i''d say no one can revert was done.      '
+  children:
+  - 4b7316e4-329e-4c35-abbe-8d7146508ce6
+  rect:
+    serializedVersion: 2
+    x: 768
+    y: 86
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-4551181884163032616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: eecd81ba-293f-4aa2-9115-be5938495d71
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Are you the person... Can you help me find my parents?
+  children:
+  - 1ce5a136-b9d9-44d5-b787-50d13398c28c
+  rect:
+    serializedVersion: 2
+    x: 287
+    y: 29
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: HasntQuest
+    parameters:
+    - InnocenceLost
+--- !u!114 &-3303631250128503632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: ba8a857c-1af5-466b-bd9d-8d9a2a3bf290
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: The amount of people telling the same story and the difficulty of accessing
+    the place make me believe that this is the hiding place for the one you are looking
+    for.
+  children:
+  - fb0113f0-3028-4856-b765-dda9558be503
+  rect:
+    serializedVersion: 2
+    x: 1034
+    y: 221
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-2982340399697334492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 2453c32a-e3a7-4bb3-95d3-6c1bef11aa4c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'When you get there, there will probably be people who need help, they may
+    even compensate you... in whatever way they can. Take care boy.     '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1600
+    y: 180
+    width: 200
+    height: 100
+  onEnterAction:
+  - EnableButtons
+  onExitAction:
+  - SwitchMusicEnd
+  - PlayMusic
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-877419602872401197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 1ce5a136-b9d9-44d5-b787-50d13398c28c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'So you''re one of the few people that survived the spell on that small village.
+    You can consider yourself a luck person... or maybe not...    '
+  children:
+  - 7cff022a-a13b-4717-997a-de046f99a632
+  rect:
+    serializedVersion: 2
+    x: 519
+    y: 87
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8634f0ee61c5c45a9af80261ffe5f5, type: 3}
+  m_Name: Innkeeper
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -6130161033374477052}
+  - {fileID: -4551181884163032616}
+  - {fileID: -877419602872401197}
+  - {fileID: -6111792692622578825}
+  - {fileID: 8720657951932218256}
+  - {fileID: 7165119936032094442}
+  - {fileID: -2982340399697334492}
+  - {fileID: 9048248871238099510}
+  - {fileID: 6055586662198979716}
+  - {fileID: 8718050612154262514}
+  - {fileID: -3303631250128503632}
+  - {fileID: -8882800516885396134}
+  - {fileID: 3413061182505593571}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &3292492272130883757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: d924e735-9ec9-4cd3-80ca-d931e0628e24
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: This is River Village, th
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 548
+    y: 255
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &3413061182505593571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: deefafab-8bbf-4ab3-bc07-7b5ff1da5159
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Good luck child.... not child anymore right? May the gods help you.    '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1537
+    y: 343
+    width: 200
+    height: 100
+  onEnterAction:
+  - GiveEndgame
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &6010117508947082344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: e1eeb937-e68e-4cdb-8b07-3677c6fabc50
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 
+  children:
+  - d924e735-9ec9-4cd3-80ca-d931e0628e24
+  rect:
+    serializedVersion: 2
+    x: 280
+    y: 154
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: HasQuest
+    parameters:
+    - InnocenceLost
+--- !u!114 &6055586662198979716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 9afefa4c-9437-4076-8463-2cdc17573cae
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yes, i do. There was a stir after you managed to kill those... creatures.
+  children:
+  - dfc9b899-8609-4f49-85f3-7c2f601fdb10
+  rect:
+    serializedVersion: 2
+    x: 535
+    y: 221
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &7165119936032094442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: c6fa923c-b18c-4d24-9a96-70770ca6a7df
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'At least take this so you can defend yourself. [ Sword added to inventory
+    ]      '
+  children:
+  - 2453c32a-e3a7-4bb3-95d3-6c1bef11aa4c
+  rect:
+    serializedVersion: 2
+    x: 1303
+    y: 114
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &8718050612154262514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: dfc9b899-8609-4f49-85f3-7c2f601fdb10
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'And I heard people, in whispers, commenting that they had seen hordes of
+    these monsters heading towards the fortress that was once believed to be abandoned.     '
+  children:
+  - ba8a857c-1af5-466b-bd9d-8d9a2a3bf290
+  rect:
+    serializedVersion: 2
+    x: 779
+    y: 210
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &8720657951932218256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 4b7316e4-329e-4c35-abbe-8d7146508ce6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'I see in your face that you''re not stopping now...If you hurry up you can
+    find one of HER allies on the surroundings of Lake Village. You''ll find it northwest
+    from here.       '
+  children:
+  - c6fa923c-b18c-4d24-9a96-70770ca6a7df
+  rect:
+    serializedVersion: 2
+    x: 1019
+    y: 86
+    width: 200
+    height: 100
+  onEnterAction:
+  - GiveInnocenceLost
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &9048248871238099510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 784b7ac9-b7c0-44d2-ac76-63f2b7fab777
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'Some bird told me you have something to tell me...   '
+  children:
+  - 9afefa4c-9437-4076-8463-2cdc17573cae
+  rect:
+    serializedVersion: 2
+    x: 265
+    y: 140
+    width: 200
+    height: 100
+  onEnterAction:
+  - SwitchMusicLast
+  - PlayMusic
+  onExitAction: []
+  condition:
+    predicate: FinishedQuest
+    parameters:
+    - Abracadabra

@@ -1,0 +1,640 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8828389734771045358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 2af9d8b3-dd03-4152-a083-dd30692ee154
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Don't be a fool, we both know that you cannot defeat me.
+  children:
+  - 784be93d-b3e4-443a-bf3b-e7c3b69ee289
+  rect:
+    serializedVersion: 2
+    x: 516
+    y: 122
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-7788275143005446262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 916eb27c-1dc9-413c-bc40-1361e839cd36
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'I have always felt an emptiness in my chest that over time took over and
+    made me a new person.     '
+  children:
+  - 23231b4c-4907-45ca-97a1-78e0985e7d48
+  rect:
+    serializedVersion: 2
+    x: 892
+    y: 460
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-7655118651286121255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: c6701a46-e2d8-4e76-baa9-dd010e744d99
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Exactly young man. You made me a favor killing those who were weak.    '
+  children:
+  - d7a969db-c8f6-4bf5-bbf4-f6e79cb34133
+  rect:
+    serializedVersion: 2
+    x: 532
+    y: -3
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-7248150651139937528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 448ace1d-6835-4caa-8258-7598d26df5ed
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1632
+    y: 205
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-6645306890908785394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 784be93d-b3e4-443a-bf3b-e7c3b69ee289
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'Enough of the talk, let''s get this over with.     '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 798
+    y: 40
+    width: 200
+    height: 100
+  onEnterAction:
+  - Porradaria
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-5493287442528817820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 67f4e59e-4ccb-4136-b2d5-253dab745a29
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'So you finally got here boy. Thats... unexpected.    '
+  children:
+  - 2467efd2-2192-4058-b1af-c1fa5bf603dd
+  - cdacdd35-cccf-48aa-9cb3-a7a202f0d426
+  - 5f14f45b-4144-4c47-a6a6-73d343f7e0d7
+  rect:
+    serializedVersion: 2
+    x: 7
+    y: 135
+    width: 200
+    height: 100
+  onEnterAction:
+  - SwitchMusicStart
+  - PlayMusic
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-5288977987034066557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 23231b4c-4907-45ca-97a1-78e0985e7d48
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'I was always stronger than my family and I always had more leadership strength.
+    As they look at people with love I see them as a herd that needs to be tamed.    '
+  children:
+  - 70c89b7a-5215-46c1-be94-4f48619aab68
+  rect:
+    serializedVersion: 2
+    x: 1081
+    y: 535
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-5230488519258421733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 5f14f45b-4144-4c47-a6a6-73d343f7e0d7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Why have you done all of this to our people?
+  children:
+  - ec4af4e0-615c-4063-b13d-302db663afc0
+  rect:
+    serializedVersion: 2
+    x: 266
+    y: 259
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-4951774273822275544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 84b224a1-8b98-4b12-83ea-2bf7197d3848
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'I don''t believe you! Get ready to die. '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1633
+    y: 85
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-4563932055916839744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 9a196354-a99e-4b94-85b5-be1480b8b0bc
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'But enough with this chit chat, let''s get to the point.    '
+  children:
+  - d7a969db-c8f6-4bf5-bbf4-f6e79cb34133
+  rect:
+    serializedVersion: 2
+    x: 545
+    y: 225
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-4010253095322036612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 2467efd2-2192-4058-b1af-c1fa5bf603dd
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Getting here was easier than I expected.
+  children:
+  - 4089e923-5d59-498b-8032-7fdc20458c1d
+  rect:
+    serializedVersion: 2
+    x: 257
+    y: 135
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-2374519314211996428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: d9eb1dfa-8447-4d54-9fa2-2816f12dcb76
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'I had a family and I couldn''t fit in with the ideas they had. However,
+    I''m sure the problem was always me.    '
+  children:
+  - 916eb27c-1dc9-413c-bc40-1361e839cd36
+  rect:
+    serializedVersion: 2
+    x: 695
+    y: 360
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-1931557461146174353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 1eb43921-5603-4c68-9175-6688c263e55b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'I''m about to get revenge for my people and then save my familly.       '
+  children:
+  - 0df46fed-0a57-4907-bd8d-38c643a11c86
+  rect:
+    serializedVersion: 2
+    x: 1128
+    y: 6
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-557734973551498518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 0230c367-7ae9-4b4b-bd9f-ae16ec4f0ec5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'What a joke. Undo the spell and I might let you live.      '
+  children:
+  - 0df46fed-0a57-4907-bd8d-38c643a11c86
+  rect:
+    serializedVersion: 2
+    x: 1140
+    y: 132
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-343665858927563437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 0df46fed-0a57-4907-bd8d-38c643a11c86
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Oh, dont you know that there is nothing anyone, even I, can do for them?
+    Haha, If you kill me, they die with me...    '
+  children:
+  - 2c7af317-a2df-42da-9398-58ea2e0134f0
+  rect:
+    serializedVersion: 2
+    x: 1383
+    y: 85
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-146350270003495627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 3bbba080-ab33-4659-867a-9d9480730c5c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'That''s why I cast a spell that overwhelms your precious village, that''s
+    the right way to rule. And the hatred I have for these "sheep" grows more and
+    more...    '
+  children:
+  - 9a196354-a99e-4b94-85b5-be1480b8b0bc
+  rect:
+    serializedVersion: 2
+    x: 1550
+    y: 484
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8634f0ee61c5c45a9af80261ffe5f5, type: 3}
+  m_Name: BossLevelThree
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -5493287442528817820}
+  - {fileID: -4010253095322036612}
+  - {fileID: 8614524112427937437}
+  - {fileID: -5230488519258421733}
+  - {fileID: 4481208934350649699}
+  - {fileID: -7655118651286121255}
+  - {fileID: -2374519314211996428}
+  - {fileID: -7788275143005446262}
+  - {fileID: -5288977987034066557}
+  - {fileID: 2072517016355259581}
+  - {fileID: -146350270003495627}
+  - {fileID: 6462563101981084918}
+  - {fileID: 8289783711293357302}
+  - {fileID: -1931557461146174353}
+  - {fileID: -557734973551498518}
+  - {fileID: -4563932055916839744}
+  - {fileID: -343665858927563437}
+  - {fileID: 8314715378478194887}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &2072517016355259581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 70c89b7a-5215-46c1-be94-4f48619aab68
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'So I destroyed them, leading with love never worked, fear changes the head
+    of the flock and thus makes them more obedient.    '
+  children:
+  - 3bbba080-ab33-4659-867a-9d9480730c5c
+  rect:
+    serializedVersion: 2
+    x: 1275
+    y: 587
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &4481208934350649699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: ec4af4e0-615c-4063-b13d-302db663afc0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'It''s an interesting question, but you might not be able to understand because
+    you''re still a child.     '
+  children:
+  - d9eb1dfa-8447-4d54-9fa2-2816f12dcb76
+  rect:
+    serializedVersion: 2
+    x: 489
+    y: 345
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &6462563101981084918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: d7a969db-c8f6-4bf5-bbf4-f6e79cb34133
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'You could join me and together no one would be able to stop us....    '
+  children:
+  - 1eb43921-5603-4c68-9175-6688c263e55b
+  - 0230c367-7ae9-4b4b-bd9f-ae16ec4f0ec5
+  rect:
+    serializedVersion: 2
+    x: 828
+    y: 40
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &8289783711293357302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 4089e923-5d59-498b-8032-7fdc20458c1d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Haha, i like it in you.  Even though they underestimate you all the time
+    I thought you would fail in your first fight.    '
+  children:
+  - d7a969db-c8f6-4bf5-bbf4-f6e79cb34133
+  rect:
+    serializedVersion: 2
+    x: 563
+    y: 135
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &8314715378478194887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 2c7af317-a2df-42da-9398-58ea2e0134f0
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Anyways, i know you''re not turning back now. Attack boy!       '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1633
+    y: 85
+    width: 200
+    height: 100
+  onEnterAction:
+  - EnableButtons
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &8614524112427937437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: cdacdd35-cccf-48aa-9cb3-a7a202f0d426
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'So you are the last one for me to take down...    '
+  children:
+  - c6701a46-e2d8-4e76-baa9-dd010e744d99
+  rect:
+    serializedVersion: 2
+    x: 263
+    y: 19
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []

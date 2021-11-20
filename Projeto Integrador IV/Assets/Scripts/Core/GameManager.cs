@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using RPG.Dialogue;
 using RPG.Map;
+using RPG.Quests;
 using RPG.Saving;
 using RPG.SceneManagement;
 using UnityEngine;

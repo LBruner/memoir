@@ -131,7 +131,7 @@ namespace RPG.Map
 
         public bool HandleRaycast(PlayerController callingController)
         {
-            if (questStatus != QuestStatus.Blocked)
+            if (questStatus == QuestStatus.Unlocked)
             {
                 GetComponent<Button>().enabled = true;
                 return true;

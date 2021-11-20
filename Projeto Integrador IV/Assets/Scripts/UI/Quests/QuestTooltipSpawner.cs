@@ -17,27 +17,33 @@ namespace RPG.UI.Quests
 
         public override void UpdateTooltip(GameObject tooltip)
         {
-            int questNumber = locationQuests.Length;
-            int completedQuests = 0;
-
-            foreach (var quest in GameManager.Instance.GetCompletedQuests())
+            if (isMenu)
             {
-                foreach (var lc in locationQuests)
+                int questNumber = locationQuests.Length;
+                int completedQuests = 0;
+
+                foreach (var quest in GameManager.Instance.GetCompletedQuests())
                 {
-                    if (quest == lc.GetTitle())
+                    Debug.Log("M");
+                    if (locationQuests.Length <= 0) return;
+                    foreach (var lc in locationQuests)
                     {
-                        completedQuests++;
+                        if (quest == lc.GetTitle())
+                        {
+                            completedQuests++;
+                        }
                     }
                 }
-            }
 
-            if (isMenu)
                 tooltip.GetComponent<QuestTooltipUI>().SetupMenu(locationName, questNumber, completedQuests);
+            }
             else
             {
+                Debug.Log("O");
                 QuestStatus status = GetComponent<QuestItemUI>().GetQuestStatus();
                 tooltip.GetComponent<QuestTooltipUI>().Setup(status);
             }
         }
     }
 }
+

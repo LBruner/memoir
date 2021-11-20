@@ -1,0 +1,548 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8481400960770611996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 738e240a-efd9-4635-b9fe-a63a24e2a1d2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I can't say more than that.... Or maybe I can help you start your jorney,
+    if that's what you wish.
+  children:
+  - 3d3abf57-22e7-41b2-bab1-cfc887ba4c0a
+  - c0684ff4-a701-41a0-a74a-7f8f7c37469c
+  - 76e038dc-2c36-4a38-90c4-340e3fa2154d
+  rect:
+    serializedVersion: 2
+    x: 750
+    y: 112
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-6304888052995701807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 3d3abf57-22e7-41b2-bab1-cfc887ba4c0a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'That''d be nice. What can you teach me? [ Start Tutorial ]       '
+  children:
+  - c437cbfb-5f6e-4635-9d05-6d5282e20e93
+  rect:
+    serializedVersion: 2
+    x: 985
+    y: 31
+    width: 200
+    height: 100
+  onEnterAction:
+  - MusicFadeOut
+  - GiveTutorial
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-6282009959351589294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: fe6b99b9-6486-441f-a6ad-de2fe43f7def
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'What are you? Or who are you?      '
+  children:
+  - be378554-6bca-47cc-bacf-053ec49305d4
+  rect:
+    serializedVersion: 2
+    x: 274
+    y: 9
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-6022436457389354898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 8666404e-8f9a-489b-8012-e904e94c5444
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Now you''re ready and I can put you in the right way. To the east you''ll
+    find someone you have to talk to. I''ll mark it on your map.         '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 2039
+    y: 62
+    width: 200
+    height: 100
+  onEnterAction:
+  - EnableButtons
+  - SwitchMusicEnd
+  onExitAction:
+  - ToggleObject
+  - FadeInMusic
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-5644898360816677102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: c437cbfb-5f6e-4635-9d05-6d5282e20e93
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'You can open your quest log by clicking on the little book on the bottom
+    right corner or by pressing Q. It displays information about your active and
+    finished quests. Try it out!   '
+  children:
+  - 252d5d9d-2830-47c3-b396-ca9be6bf6526
+  rect:
+    serializedVersion: 2
+    x: 1227
+    y: 11
+    width: 200
+    height: 100
+  onEnterAction:
+  - CompleteTutorial1
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-4665862694716112838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 252d5d9d-2830-47c3-b396-ca9be6bf6526
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "You also have an inventory that can be opened by pressing I. \nIt shows
+    you all your items and cards.    "
+  children:
+  - 9ddce7e5-322b-41b5-b404-fe8e97fda31f
+  rect:
+    serializedVersion: 2
+    x: 1490
+    y: 57
+    width: 200
+    height: 100
+  onEnterAction:
+  - CompleteTutorial2
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-1110670910423983765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 451e79bb-f872-4a9f-af34-99022a6983c4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Well, at least i can put you in the right way. To the south you'll find someone
+    you have to talk to.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1124
+    y: 189
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-845512522681352797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: e22bd92c-08e4-4ffa-8b1f-3d8be4be20e5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Hey Henrique, you need to wake up!        '
+  children:
+  - fe6b99b9-6486-441f-a6ad-de2fe43f7def
+  - 127c26ed-b896-441a-a018-ebd39feb8ec2
+  - bbd44015-15ea-4c40-b1bc-fc27f89bd10b
+  rect:
+    serializedVersion: 2
+    x: 6
+    y: 63
+    width: 200
+    height: 100
+  onEnterAction:
+  - 
+  - ToggleObject
+  - SwitchMusicStart
+  - PlayMusic
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8634f0ee61c5c45a9af80261ffe5f5, type: 3}
+  m_Name: Intro_Alma
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -845512522681352797}
+  - {fileID: -6282009959351589294}
+  - {fileID: 696797535873791515}
+  - {fileID: 1796882086170528569}
+  - {fileID: 289682561312948154}
+  - {fileID: 7214769449138113}
+  - {fileID: -8481400960770611996}
+  - {fileID: -6304888052995701807}
+  - {fileID: 4842801114538364514}
+  - {fileID: 5885899849727894638}
+  - {fileID: -5644898360816677102}
+  - {fileID: 7647882892553554558}
+  - {fileID: -4665862694716112838}
+  - {fileID: 1189707889862195554}
+  - {fileID: -6022436457389354898}
+  - {fileID: 3600968196139143816}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &7214769449138113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: fef44f7a-90eb-4c12-aed2-01ff57087312
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Im so sorry but there's nothing you can do for them now...
+  children:
+  - 738e240a-efd9-4635-b9fe-a63a24e2a1d2
+  rect:
+    serializedVersion: 2
+    x: 505
+    y: 176
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &289682561312948154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: bbd44015-15ea-4c40-b1bc-fc27f89bd10b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: What happened to my family?
+  children:
+  - fef44f7a-90eb-4c12-aed2-01ff57087312
+  rect:
+    serializedVersion: 2
+    x: 281
+    y: 209
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &696797535873791515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 127c26ed-b896-441a-a018-ebd39feb8ec2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'What''s going on here? '
+  children:
+  - be378554-6bca-47cc-bacf-053ec49305d4
+  rect:
+    serializedVersion: 2
+    x: 273
+    y: 100
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &1189707889862195554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 9ddce7e5-322b-41b5-b404-fe8e97fda31f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'And you can also save your game clicking on the little house on the bottom
+    left corner to be able to load your saved game from the menu.       '
+  children:
+  - 8666404e-8f9a-489b-8012-e904e94c5444
+  rect:
+    serializedVersion: 2
+    x: 1731
+    y: 27
+    width: 200
+    height: 100
+  onEnterAction:
+  - CompleteTutorial3
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &1796882086170528569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: be378554-6bca-47cc-bacf-053ec49305d4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'I am the guardian of the oracle that you carry on your wrist. You are the
+    pure boy of the prophecy, who needs to stop HER.        '
+  children:
+  - 738e240a-efd9-4635-b9fe-a63a24e2a1d2
+  rect:
+    serializedVersion: 2
+    x: 515
+    y: 55
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &3600968196139143816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 21a1e76d-c76f-436f-867e-0de141186406
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Ufff... fine. To the east you''ll find someone you have to talk to. I''ll
+    mark it on your map.         '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1271
+    y: 268
+    width: 200
+    height: 100
+  onEnterAction:
+  - EnableButtons
+  onExitAction:
+  - ToggleObject
+  - FadeInMusic
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &4842801114538364514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: c0684ff4-a701-41a0-a74a-7f8f7c37469c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Please, where can I go to find help to find my family?
+  children:
+  - 0e611444-445d-47f1-b1b0-0b3fc37dcf3f
+  rect:
+    serializedVersion: 2
+    x: 988
+    y: 139
+    width: 200
+    height: 100
+  onEnterAction:
+  - MusicFadeOut
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &5885899849727894638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 76e038dc-2c36-4a38-90c4-340e3fa2154d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Just tell me some place where I can find some real help.
+  children:
+  - 21a1e76d-c76f-436f-867e-0de141186406
+  rect:
+    serializedVersion: 2
+    x: 983
+    y: 263
+    width: 200
+    height: 100
+  onEnterAction:
+  - MusicFadeOut
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &7647882892553554558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 0e611444-445d-47f1-b1b0-0b3fc37dcf3f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Well, at least i can put you in the right way.To the east you''ll find someone
+    you have to talk to. I''ll mark it on your map.         '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1246
+    y: 158
+    width: 200
+    height: 100
+  onEnterAction:
+  - EnableButtons
+  onExitAction:
+  - ToggleObject
+  - FadeInMusic
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &8140571281258347055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183610aca247d7f4d90692034b02fe79, type: 3}
+  m_Name: 3591c893-a1d8-4729-81b4-df95e9432823
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: fsafa
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 2115
+    y: 34
+    width: 200
+    height: 100
+  onEnterAction: []
+  onExitAction: []
+  condition:
+    predicate: 
+    parameters: []

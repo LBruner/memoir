@@ -118,6 +118,8 @@ namespace RPG.Quests
                     return HasQuest(Quest.GetByName(parameters[0]));
                 case "HasntQuest":
                     return !HasQuest(Quest.GetByName(parameters[0]));
+                case "FinishedQuest":
+                    return GameManager.Instance.GetCompletedQuests().Contains(parameters[0]);
             }
             return null;
         }

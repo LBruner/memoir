@@ -101,8 +101,8 @@ MonoBehaviour:
   - be84d272-f3bf-4a4d-88a6-590eeca67ae4
   rect:
     serializedVersion: 2
-    x: 589
-    y: 175
+    x: 654
+    y: 404
     width: 200
     height: 100
   onEnterAction: 
@@ -156,8 +156,8 @@ MonoBehaviour:
   - a683d096-20f8-4111-8b58-f0218d7d20cb
   rect:
     serializedVersion: 2
-    x: 1032
-    y: 272
+    x: 1354
+    y: 301
     width: 200
     height: 100
   onEnterAction: AddGettingStarted
@@ -508,8 +508,8 @@ MonoBehaviour:
   - 1ab7c37f-f7eb-4c2e-9a40-ecf451cc4f43
   rect:
     serializedVersion: 2
-    x: 1720
-    y: 124
+    x: 1717
+    y: 139
     width: 200
     height: 100
   onEnterAction: 

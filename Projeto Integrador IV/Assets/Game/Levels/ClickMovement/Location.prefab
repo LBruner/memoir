@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AIConversant: {fileID: 0}
+  canRun: 1
 --- !u!114 &351140561972596959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +144,7 @@ GameObject:
   - component: {fileID: 1690623632244452775}
   - component: {fileID: 3388480463091508655}
   - component: {fileID: 4339091199605168592}
+  - component: {fileID: 9154390820395728236}
   m_Layer: 0
   m_Name: Location
   m_TagString: Untagged
@@ -265,6 +267,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: 
+--- !u!81 &9154390820395728236
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690623632244452772}
+  m_Enabled: 1
 --- !u!1001 &1679633143903820364
 PrefabInstance:
   m_ObjectHideFlags: 0

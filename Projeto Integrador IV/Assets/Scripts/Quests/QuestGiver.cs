@@ -12,6 +12,7 @@ namespace RPG.Quests
 
             GameManager.Instance.AddQuest(quest.name);
             questList.AddQuest(quest);
+            UpdateUI();
         }
 
         public void UpdateUI()

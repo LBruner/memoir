@@ -27,11 +27,15 @@ namespace RPG.SceneManagement
 
         public Coroutine FadeOut(float time)
         {
+            StartCoroutine(FadeAudioSource.StartFade(GameObject.FindWithTag("Audio").GetComponent<AudioSource>(), time, 0.6f));
+
             return Fade(1, time);
         }
 
         public Coroutine FadeIn(float time)
         {
+            StartCoroutine(FadeAudioSource.StartFade(GameObject.FindWithTag("Audio").GetComponent<AudioSource>(), time, 1f));
+
             return Fade(0, time);
         }
 
