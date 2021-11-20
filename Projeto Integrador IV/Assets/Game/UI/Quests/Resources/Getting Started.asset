@@ -16,4 +16,12 @@ MonoBehaviour:
   - reference: 1
     description: Mate o inimigo A
   rewards:
-  - name: Conhecimento
+  - cards:
+    - {fileID: 11400000, guid: 250252d853de153438382acd6230aa3f, type: 2}
+    items:
+    - {fileID: 11400000, guid: 2255eee74604d854e8031060caf050a1, type: 2}
+    - {fileID: 11400000, guid: 2255eee74604d854e8031060caf050a1, type: 2}
+    - {fileID: 11400000, guid: 2255eee74604d854e8031060caf050a1, type: 2}
+    - {fileID: 11400000, guid: 2255eee74604d854e8031060caf050a1, type: 2}
+  - cards: []
+    items: []

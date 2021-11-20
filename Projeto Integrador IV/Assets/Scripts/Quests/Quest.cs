@@ -15,8 +15,8 @@ namespace RPG.Quests
         [System.Serializable]
         public class Reward
         {
-            public string name;
-            // public InventoryItem item;
+            public Card[] cards;
+            public EquippableItem[] items;
         }
 
         [System.Serializable]

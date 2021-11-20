@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3132,6 +3132,16 @@ PrefabInstance:
       propertyPath: DeckSystem
       value: 
       objectReference: {fileID: 1655032299}
+    - target: {fileID: 1273982265425829550, guid: 0514c40055f69d3489462b2e1cf50d56,
+        type: 3}
+      propertyPath: EquipmentPanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273982265425829550, guid: 0514c40055f69d3489462b2e1cf50d56,
+        type: 3}
+      propertyPath: CardSaveManager
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2832160245068918056, guid: 0514c40055f69d3489462b2e1cf50d56,
         type: 3}
       propertyPath: m_Name
