@@ -16,5 +16,10 @@ namespace RPG.Dialogue
                 GameManager.Instance.UpdateMenuQuest();
             }
         }
+
+        public UnityEvent GetTrigger()
+        {
+            return action;
+        }
     }
 }

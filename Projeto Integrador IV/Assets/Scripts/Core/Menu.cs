@@ -73,5 +73,10 @@ namespace RPG.Core
         {
             Screen.fullScreen = isFullscreen;
         }
+
+        public void CloseGame()
+        {
+            Application.Quit();
+        }
     }
 }

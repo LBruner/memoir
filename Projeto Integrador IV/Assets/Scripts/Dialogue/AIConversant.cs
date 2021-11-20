@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using RPG.Control;
+using RPG.UI;
 using UnityEngine;
 
 namespace RPG.Dialogue
@@ -9,8 +10,14 @@ namespace RPG.Dialogue
     {
         [SerializeField] string conversantName;
         [SerializeField] Color conversantColor;
-        [SerializeField] Sprite enemyImage;
         [SerializeField] Dialogue dialogue = null;
+
+        DialogueUI ui;
+
+        private void Awake()
+        {
+            ui = FindObjectOfType<DialogueUI>();
+        }
 
         public AIConversant(string name, Color color)
         {
@@ -54,9 +61,19 @@ namespace RPG.Dialogue
             return conversantColor;
         }
 
-        public Sprite GetImage()
+        public void SetQuitButtonState(bool value)
         {
-            return enemyImage;
+            DialogueUI.Instance.SetQuitButtonState(value);
+        }
+
+        public void SetActive(GameObject go)
+        {
+            go.SetActive(!go.activeSelf);
+        }
+
+        public void FadeAudio(float target)
+        {
+            StartCoroutine(FadeAudioSource.StartFade(GameObject.FindWithTag("Audio").GetComponent<AudioSource>(), 0.4f, target));
         }
     }
 }

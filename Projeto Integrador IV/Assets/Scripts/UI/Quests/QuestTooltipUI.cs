@@ -19,6 +19,7 @@ namespace RPG.UI.Quests
 
         public void Setup(QuestStatus status)
         {
+            Debug.Log("OI");
             Quest quest = status.GetQuest();
             title.text = quest.GetTitle();
 

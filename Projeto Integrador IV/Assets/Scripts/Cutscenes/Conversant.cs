@@ -11,17 +11,21 @@ namespace RPG.Dialogue
         [SerializeField] bool canRun = true;
 
         PlayerConversant player;
-        bool hasSpoken = false;
-
+        // bool hasSpoken = false;
+        int timesEnabled = -1;
+        [SerializeField] int enabledOn = 0;
         private void Start()
         {
             player = FindObjectOfType<PlayerConversant>();
+            SetHasSpoken();
 
-            if (AIConversant != null && !hasSpoken)
+            if (AIConversant != null && timesEnabled == enabledOn)
             {
+                Debug.Log(enabledOn);
+                Debug.Log(timesEnabled);
                 AIConversant conversant = AIConversant.GetComponentInChildren<AIConversant>();
                 player.StartDialogue(conversant, conversant.GetDialogue());
-                SetHasSpoken();
+                // SetHasSpoken();
 
                 if (!canRun)
                     FindObjectOfType<DialogueUI>().SetQuitButtonState(false);
@@ -35,17 +39,20 @@ namespace RPG.Dialogue
 
         public void SetHasSpoken()
         {
-            hasSpoken = true;
+            timesEnabled++;
+            // hasSpoken = true;
         }
 
         public object CaptureState()
         {
-            return hasSpoken;
+            return timesEnabled;
+            // return hasSpoken;
         }
 
         public void RestoreState(object state)
         {
-            hasSpoken = (bool)state;
+            timesEnabled = (int)state;
+            // hasSpoken = (bool)state;
         }
     }
 }
