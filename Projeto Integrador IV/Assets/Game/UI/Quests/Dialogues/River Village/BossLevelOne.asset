@@ -329,7 +329,7 @@ MonoBehaviour:
   onEnterAction:
   - EnableButtons
   onExitAction:
-  - porradaria/ mandar pro mapa
+  - Fight
   condition:
     predicate: 
     parameters: []
@@ -358,7 +358,7 @@ MonoBehaviour:
   onEnterAction:
   - EnableButtons
   onExitAction:
-  - porradaria/ mandar pro mapa
+  - Fight
   condition:
     predicate: 
     parameters: []

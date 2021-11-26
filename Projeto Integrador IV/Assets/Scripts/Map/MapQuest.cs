@@ -4,6 +4,7 @@ using RPG.Saving;
 using RPG.UI.Quests;
 using UnityEngine;
 using UnityEngine.UI;
+using RPG.SceneManagement;
 
 namespace RPG.Map
 {
@@ -24,6 +25,7 @@ namespace RPG.Map
 
         public void LoadScene()
         {
+            FindObjectOfType<SavingWrapper>().Save();
             GameManager.Instance.Load(sceneToLoad);
         }
         private void OnEnable()

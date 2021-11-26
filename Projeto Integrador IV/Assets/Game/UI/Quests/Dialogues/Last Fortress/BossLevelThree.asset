@@ -607,7 +607,8 @@ MonoBehaviour:
     height: 100
   onEnterAction:
   - EnableButtons
-  onExitAction: []
+  onExitAction:
+  - Combat
   condition:
     predicate: 
     parameters: []
