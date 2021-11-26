@@ -4,29 +4,31 @@ using UnityEngine;
 public class PlayerDeck : MonoBehaviour
 {
 
-	public static PlayerDeck Instance;
+    public static PlayerDeck Instance;
 
-	public Deck startingDeck;
+    public Deck startingDeck;
 
-	public List<Card> Cards;
+    public List<Card> Cards;
 
-	private void Awake()
-	{
-		if (Cards.Count == 0)
-		{
-			SetStartingDeck();
-		}
+    private void Awake()
+    {
+        if (Instance != null) return;
 
-		Instance = this;
+        if (Cards.Count == 0)
+        {
+            SetStartingDeck();
+        }
 
-		DontDestroyOnLoad(gameObject);
-	}
+        Instance = this;
 
-	public void SetStartingDeck()
-	{
-		foreach (Card card in startingDeck.Cards)
-		{
-			Cards.Add(card.GetCopy());
-		}
-	}
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public void SetStartingDeck()
+    {
+        foreach (Card card in startingDeck.Cards)
+        {
+            Cards.Add(card.GetCopy());
+        }
+    }
 }

@@ -1830,7 +1830,7 @@ PrefabInstance:
     - target: {fileID: 2832160245068918056, guid: 0514c40055f69d3489462b2e1cf50d56,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3910771555059085703, guid: 0514c40055f69d3489462b2e1cf50d56,
         type: 3}
@@ -3305,7 +3305,7 @@ PrefabInstance:
     - target: {fileID: 4045087162255506865, guid: a3b1fad88f12bd04a85a2a286593ebb6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4045087162255506867, guid: a3b1fad88f12bd04a85a2a286593ebb6,
         type: 3}
@@ -4176,7 +4176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5020334488120356, guid: 24d83abec9b79fb4b809118c3165676a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5020334488120357, guid: 24d83abec9b79fb4b809118c3165676a, type: 3}
       propertyPath: equipmentPanelGameObject

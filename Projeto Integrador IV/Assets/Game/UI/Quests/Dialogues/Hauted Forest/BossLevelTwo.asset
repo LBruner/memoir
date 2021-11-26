@@ -17,14 +17,14 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 1144
-    y: 116
+    x: 1097
+    y: 152
     width: 200
     height: 100
   onEnterAction:
   - EnableButtons
   onExitAction:
-  - 
+  - Combat
   condition:
     predicate: 
     parameters: []
