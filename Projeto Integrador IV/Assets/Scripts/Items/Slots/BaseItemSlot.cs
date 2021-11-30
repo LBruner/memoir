@@ -95,6 +95,25 @@ public class BaseItemSlot : MonoBehaviour, IPointerClickHandler, IPointerEnterHa
 		Amount = _amount;
 	}
 
+	private void Awake()
+	{
+		if (image == null)
+		{
+			Debug.Log("Image: " + GetComponentsInChildren<Image>()[2].gameObject.name);
+			image = GetComponentsInChildren<Image>()[2];
+		}
+
+
+		if (itemName == null)
+			itemName = GetComponentsInChildren<Text>()[0];
+
+		if (itemDescription == null)
+			itemDescription = GetComponentsInChildren<Text>()[1];
+
+		Item = _item;
+		Amount = _amount;
+	}
+
 	protected virtual void OnDisable()
 	{
 		if (isPointerOver)

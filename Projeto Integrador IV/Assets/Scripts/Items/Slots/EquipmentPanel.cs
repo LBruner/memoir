@@ -28,9 +28,9 @@ public class EquipmentPanel : MonoBehaviour
     {
         for (int i = 0; i < EquipmentSlots.Count; i++)
         {
-            EquipmentSlots[i].OnPointerEnterEvent += slot => OnPointerEnterEvent(slot);
-            EquipmentSlots[i].OnPointerExitEvent += slot => OnPointerExitEvent(slot);
-            EquipmentSlots[i].OnRightClickEvent += slot => OnRightClickEvent(slot);
+            //EquipmentSlots[i].OnPointerEnterEvent += slot => OnPointerEnterEvent(slot);
+            //EquipmentSlots[i].OnPointerExitEvent += slot => OnPointerExitEvent(slot);
+            //EquipmentSlots[i].OnRightClickEvent += slot => OnRightClickEvent(slot);
         }
     }
 
@@ -48,14 +48,15 @@ public class EquipmentPanel : MonoBehaviour
     public bool AddItem(EquippableItem item)
     {
         GameObject slotObject = Instantiate(EquipmentSlotPrefab);
+        slotObject.transform.SetParent(equipmentSlotsParent);
+        slotObject.transform.localScale = Vector2.one;
+
         EquipmentSlot slot = slotObject.GetComponent<EquipmentSlot>();
         slot.Item = item;
         slot.Type = item.Type;
         slot.Amount = 1;
 
         EquipmentSlots.Add(slot);
-
-        slotObject.transform.SetParent(equipmentSlotsParent);
 
         return true;
     }
