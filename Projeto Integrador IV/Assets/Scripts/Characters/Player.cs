@@ -55,9 +55,13 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null) return;
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-        CanSave = true;
+        CanSave = true; // true;
 
         Deck = PlayerDeck.Instance;
 
@@ -66,6 +70,8 @@ public class Player : MonoBehaviour
 
         CurrentHealth = MaxHealth;
         CurrentEnergy = MaxEnergy;
+
+        Items = new List<Item>();
 
         if (CardSaveManager != null)
         {
