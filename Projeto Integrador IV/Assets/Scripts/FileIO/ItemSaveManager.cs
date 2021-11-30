@@ -10,8 +10,11 @@ public class ItemSaveManager : MonoBehaviour
     public void LoadInventory()
     {
         InventorySaveData savedItems = ItemSaveIO.LoadItems(InventoryFileName);
-        if (savedItems == null) return;
+        if (savedItems == null || Player.Instance == null) return;
+
         Player.Instance.Items.Clear();
+
+        Debug.Log("[Loading] Loading Items: " + savedItems);
 
         for (int i = 0; i < savedItems.SavedItems.Length; i++)
         {
@@ -34,8 +37,8 @@ public class ItemSaveManager : MonoBehaviour
         {
             Item item = items[i];
 
-            //saveData.SavedItems[i] = new ItemSaveData(item.ID, 1);
-        }
+			saveData.SavedItems[i] = new ItemSaveData(item.ID, 1);
+		}
 
         ItemSaveIO.SaveItems(saveData, fileName);
     }
